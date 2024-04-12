@@ -1,0 +1,114 @@
+{
+  "RootObject": {
+    "Id": "55cf3403-f938-4290-a373-763e33c8e5e0",
+    "Name": "Car",
+    "Position": "-463.1436,-477.0635,19.96743",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "0658b9ee-d376-400a-a92c-886e2aa83971",
+        "Name": "Frame",
+        "Position": "19.27662,-56.57962,37.86647",
+        "Scale": "1.089095,2.562099,0.2494654",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "Id": "bf7741ea-452e-4d4d-a71c-e19523776a98",
+        "Name": "WindShield",
+        "Position": "19.27662,-1.437206,58.1672",
+        "Scale": "1.089095,0.3779213,0.5573707",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/default.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "Id": "98ad9d1c-c481-40f6-a5f1-9bcba9abf6d8",
+        "Name": "Tire",
+        "Position": "-12.904,-93.51891,32.17337",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Prop",
+            "Health": 0,
+            "IsStatic": false,
+            "Model": "models/props/tire001.vmdl",
+            "ShowCreatedComponents": false
+          }
+        ]
+      },
+      {
+        "Id": "2a24e44f-bfff-41f4-8048-bd956fbb98e4",
+        "Name": "Tire",
+        "Position": "-12.90385,-12.09175,32.17337",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Prop",
+            "Health": 0,
+            "IsStatic": false,
+            "Model": "models/props/tire001.vmdl",
+            "ShowCreatedComponents": false
+          }
+        ]
+      },
+      {
+        "Id": "22549ae6-dbf8-415c-bd25-54160a880134",
+        "Name": "Tire",
+        "Position": "53.03727,-93.51867,32.17337",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Prop",
+            "Health": 0,
+            "IsStatic": false,
+            "Model": "models/props/tire001.vmdl",
+            "ShowCreatedComponents": false
+          }
+        ]
+      },
+      {
+        "Id": "857d170d-30a1-454c-afca-15536f2ddca1",
+        "Name": "Tire",
+        "Position": "53.03736,-12.09162,32.17337",
+        "Rotation": "0,0,0.7071067,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Prop",
+            "Health": 0,
+            "IsStatic": false,
+            "Model": "models/props/tire001.vmdl",
+            "ShowCreatedComponents": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "svin.tire"
+  ]
+}

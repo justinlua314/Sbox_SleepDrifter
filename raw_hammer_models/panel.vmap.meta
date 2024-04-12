@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "panel",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "panel",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "tiowevolve.dev_orange_03#52991",
+        "sundayservice.facade011#36014"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "raw_hammer_models/panel.vmap"
+      }
+    }
+  }
+}

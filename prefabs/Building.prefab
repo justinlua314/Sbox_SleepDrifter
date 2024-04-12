@@ -1,0 +1,31 @@
+{
+  "RootObject": {
+    "Id": "76722899-ecb1-4778-8889-785a73dce86d",
+    "Name": "building",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "46856b96-3191-4c54-9a86-732e04075831",
+        "Name": "Cube",
+        "Position": "0,0,3.079543",
+        "Scale": "12.40575,19.99311,0.1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

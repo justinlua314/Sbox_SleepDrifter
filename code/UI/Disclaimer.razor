@@ -1,0 +1,20 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<h1>Disclaimer</h1>
+
+	<h2>Photosensitivity Warning</h2>
+	<b>This game may cause distress or injury if you are sensitive to flashing lights/textures.</b>
+
+	<b class="durgz">This game does not intend to promote the use of illegal substances.</b>
+</root>
+
+@code
+{
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( "" );
+}

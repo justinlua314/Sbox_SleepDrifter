@@ -1,0 +1,36 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "tmap_prison",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "tmap_prison",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "apetavern.grass_01a#46402",
+        "apetavern.sheet_metal_01a#46369",
+        "tiowevolve.dev_orange_03#52991",
+        "apetavern.chainlink_fence#46403",
+        "eurorp.concrete_02#15580",
+        "wujekfoliarz.pano_20230818_171551_171#34395",
+        "andiq.tiles078#12705",
+        "facepunch.wood_trim_burnt#43512",
+        "sundayservice.artdeco_tile_02#27365",
+        "fpopium.concrete_b#48367",
+        "titanovsky.futuristic-cube-metal#54274"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/tmap_prison.vmap"
+      }
+    }
+  }
+}

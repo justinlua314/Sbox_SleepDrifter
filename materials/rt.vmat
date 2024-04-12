@@ -1,0 +1,14 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/rt_shader.shader"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	Attributes
+	{
+		render_target ""
+	}
+}

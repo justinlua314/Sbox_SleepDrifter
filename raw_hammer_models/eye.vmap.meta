@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "eye",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "eye",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "magikarp.purple3#34288",
+        "rustextended.dark_wood_planks#43259"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "raw_hammer_models/eye.vmap"
+      }
+    }
+  }
+}

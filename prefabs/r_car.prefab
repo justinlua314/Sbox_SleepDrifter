@@ -1,0 +1,130 @@
+{
+  "RootObject": {
+    "__guid": "b4d71107-a8a9-4623-86c0-65c680790637",
+    "Name": "r_car",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Children": [
+      {
+        "__guid": "c28e3c2d-b6ec-4948-bd5c-933ad282627c",
+        "Name": "Body",
+        "Position": "0,0,3.574318",
+        "Scale": "0.6238382,0.3346002,0.0751868",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "610ff41a-fd94-416b-b679-3ff318475a3d",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "3969f474-c7ce-46f9-b1f2-755b959eac78",
+        "Name": "Windshield",
+        "Position": "-14.09564,0,8.480876",
+        "Scale": "0.06127197,0.3346002,0.1205321",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "965d5222-c677-48ac-8a05-77f8a6490833",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "8ea53b33-4fb8-464e-ab99-7510df055c4d",
+        "Name": "Tire",
+        "Position": "12.93622,9.495972,1.677173",
+        "Scale": "0.1057069,0.06685128,0.04683401",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "77a1b224-3266-43e3-8af6-698e0983eda6",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "f5485016-db5f-4be9-aa5b-840455cdde16",
+        "Name": "Tire",
+        "Position": "12.93622,-9.829193,1.677173",
+        "Scale": "0.1057069,0.06685128,0.04683401",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "30654013-d1ab-41d4-8033-7ef155b756a8",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "134845fd-cbb2-4e17-832d-8dd0ae39d4a9",
+        "Name": "Tire",
+        "Position": "-12.86075,9.495972,1.677173",
+        "Scale": "0.1057069,0.06685128,0.04683401",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "2fecb54d-65bc-470c-8435-35e80d1f0ecc",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      },
+      {
+        "__guid": "5133d3fd-6e00-4ec9-a969-49a0ecb8bbb0",
+        "Name": "Tire",
+        "Position": "-12.86075,-9.829193,1.677173",
+        "Scale": "0.1057069,0.06685128,0.04683401",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "80c86c9f-395f-415a-a9eb-506ce6166e00",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/missing-no.vmat",
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

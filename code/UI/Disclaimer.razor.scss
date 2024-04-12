@@ -1,0 +1,37 @@
+Disclaimer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #361852;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	flex-direction: column;
+
+	h1 {
+		font-size: 86px;
+		font-family: Poppins;
+		color: #4ead7f;
+		margin-bottom: 30px;
+	}
+
+	h2 {
+		font-size: 70px;
+		font-family: Poppins;
+		color: #3a3b9c;
+		margin-bottom: 5px;
+	}
+
+	b {
+		font-size: 30px;
+		font-family: Poppins;
+		color: #bf7f69;
+		margin-bottom: 50px;
+	}
+
+	.durgz {
+		color: #a31d9d;
+	}
+}
