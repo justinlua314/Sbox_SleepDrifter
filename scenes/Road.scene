@@ -351,6 +351,40 @@
           ]
         },
         {
+          "__guid": "945b4fa8-a3b6-45a8-a69c-eea6139747f8",
+          "Name": "L1 Ground",
+          "Position": "506,774.518,4.913986",
+          "Scale": "20.73604,19.56749,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "7b9fc318-1785-4efc-805b-dd52035282fc",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "cad24310-0e04-4c93-88f4-5a6fba0fb214",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "43d3cc60-d1e9-4546-925f-1957d6944b0e",
+                "go": "566fb9ad-163c-4348-9800-994d88033f34",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        },
+        {
           "__guid": "7e0a2ade-0ff0-4e1a-92d2-7337961fd65e",
           "Name": "L2",
           "Position": "506,-1171.934,127",
@@ -380,6 +414,41 @@
                 "_type": "component",
                 "component_id": "c8aaf180-b350-43a0-ab4c-eb0c82bc6d41",
                 "go": "708ddb07-96b7-439b-8baf-a03387b6c467",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "566fb9ad-163c-4348-9800-994d88033f34",
+          "Name": "L2 Ground",
+          "Position": "505.9999,-741.0569,1.298174",
+          "Rotation": "0.00000000000001421085,-0.00000008940697,-1,0.0000001947072",
+          "Scale": "20.73604,23.95188,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "ebcf2e50-211d-4ef8-82a5-c10b6691ea2e",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "43d3cc60-d1e9-4546-925f-1957d6944b0e",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "cad24310-0e04-4c93-88f4-5a6fba0fb214",
+                "go": "945b4fa8-a3b6-45a8-a69c-eea6139747f8",
                 "component_type": "LookHaunt"
               }
             }
@@ -3311,7 +3380,7 @@
   },
   "Title": "road",
   "Description": "",
-  "LastSaved": "2024-04-11T19:43:52.6344449-04:00",
+  "LastSaved": "2024-04-12T12:42:43.8438514-04:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
