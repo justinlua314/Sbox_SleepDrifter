@@ -974,14 +974,6 @@
                       "Tint": "1,1,1,1"
                     },
                     {
-                      "__type": "Sandbox.BoxCollider",
-                      "__guid": "6f94eae1-4dce-4256-9f0f-9ff8c28f1dd7",
-                      "Center": "1.4,-0.4,8.499998",
-                      "IsTrigger": false,
-                      "Scale": "14.80001,10.90001,20.40004",
-                      "Static": true
-                    },
-                    {
                       "__type": "UseRig",
                       "__guid": "c79c8c72-d5db-481b-852c-74d26a061880",
                       "Ambient": "sounds/ambient.sound",
@@ -1011,6 +1003,14 @@
                       "InsideObscuredColor": "0,0,0,0",
                       "ObscuredColor": "0,0,0,0.4",
                       "Width": 1.5
+                    },
+                    {
+                      "__type": "Sandbox.BoxCollider",
+                      "__guid": "ec847343-50be-4a3d-8fa7-acfa17ef9d49",
+                      "Center": "-22.50004,0,77.89979",
+                      "IsTrigger": false,
+                      "Scale": "84.99989,27.40009,152.5994",
+                      "Static": false
                     }
                   ]
                 }
@@ -1326,7 +1326,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-04-12T06:03:13.9599942-04:00",
+  "LastSaved": "2024-04-12T14:12:57.717342-04:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
