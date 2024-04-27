@@ -1,15 +1,11 @@
 {
-  "Title": "SleepDrifter",
+  "Title": "Sleep Drifter",
   "Type": "game",
   "Org": "opportunity",
   "Ident": "sleep_drifter",
   "Tags": "art trippy expiremental weird walking",
   "Schema": 1,
-  "HasAssets": true,
-  "AssetsPath": "",
   "Resources": null,
-  "HasCode": true,
-  "CodePath": "/code/",
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
@@ -25,7 +21,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/mainhub.scene",
+    "StartupScene": "scenes/disclaimer.scene",
     "ProjectTemplate": null,
     "LaunchMode": "Normal"
   }

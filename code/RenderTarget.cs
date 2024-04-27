@@ -22,6 +22,8 @@ public sealed class RenderTarget : Component {
 	protected override void OnFixedUpdate() {
 		camera.RenderToTexture( tex );
 
-		model.SceneObject.Attributes.Set( "render_target", tex );
+		if ( model.SceneObject != null ) {
+			model.SceneObject.Attributes.Set( "render_target", tex );
+		}
 	}
 }

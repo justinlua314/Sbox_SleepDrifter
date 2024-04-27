@@ -1,0 +1,42 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "main_hub",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "main_hub",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "tiowevolve.dev_orange_01#52989",
+        "apetavern.grass_01a#46402",
+        "apetavern.sheet_metal_01a#46369",
+        "dopamine.starmap#27121",
+        "fpopium.carpet_d#48348",
+        "facepunch.stairs_rect_tile_a_blend#47188",
+        "tridge.plaster_white#31727",
+        "tameranian.bnw_tiles#9973",
+        "fpopium.ceramic_tiles_damaged#48356",
+        "sundayservice.woodpanelwall_02#27384",
+        "creation.paintedplaster017_2k#25551",
+        "rustextended.wood_planks_a#43387",
+        "gkaf.wood_panel#11662",
+        "semxy.bowiecarpet#24042",
+        "facepunch.wooden_door_frame_single_02a#43551",
+        "domd.materialswood_foxtrot#38403",
+        "fpopium.couch_01#48460"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/main_hub.vmap"
+      }
+    }
+  }
+}

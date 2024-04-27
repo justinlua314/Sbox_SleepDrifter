@@ -1,0 +1,134 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 0,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1168,112",
+      "Albedo": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.7,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "1",
+      "Position": "272,112",
+      "A": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "2",
+      "Position": "-496,48"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "3",
+      "Position": "-128,176"
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "4",
+      "Position": "-256,80",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 100,
+      "Value": 0.2,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "5",
+      "Position": "-496,128"
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "6",
+      "Position": "-112,80",
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ValueNoise",
+      "Identifier": "7",
+      "Position": "48,80",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Max",
+      "DefaultA": 0,
+      "DefaultB": 0.2,
+      "Identifier": "8",
+      "Position": "672,112",
+      "InputA": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Step",
+      "DefaultInput": 0,
+      "DefaultEdge": 0.5,
+      "Identifier": "9",
+      "Position": "464,112",
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "FuzzyNoise",
+      "Identifier": "10",
+      "Position": "64,176",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Min",
+      "DefaultA": 0,
+      "DefaultB": 0.5,
+      "Identifier": "11",
+      "Position": "864,112",
+      "InputA": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    }
+  ]
+}

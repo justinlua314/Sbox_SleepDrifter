@@ -1,0 +1,26 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "teeth",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "teeth",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "frogpond.wallclock#12971"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "raw_hammer_models/teeth.vmap"
+      }
+    }
+  }
+}

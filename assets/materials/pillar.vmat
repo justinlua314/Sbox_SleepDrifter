@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/pillar.shader"
+
+	Texture_ps_0 "materials/png/roman pattern.png"
+	Texture_ps_1 "materials/png/roman pattern.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

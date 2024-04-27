@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "jmuseum",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "jmuseum",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "qxp.banana#50469",
+        "qxp.banana#50352"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/jmuseum.vmap"
+      }
+    }
+  }
+}

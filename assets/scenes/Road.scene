@@ -1,0 +1,3387 @@
+{
+  "__guid": "474ad504-f17c-4c66-8d08-9a6d1799629d",
+  "GameObjects": [
+    {
+      "__guid": "de3df401-9878-4ff1-b5e8-c2181cb7140d",
+      "Name": "Player",
+      "Position": "217.6445,-10.32373,12.63162",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Tags": "player",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "7523f332-d056-4461-9002-da15241c0e92",
+          "BodyGroups": 336,
+          "CreateBoneObjects": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "0bfdf0b7-2a5e-4a4a-b8a2-dd9dec5a3613",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+          "__guid": "4834d6b0-0404-4f26-8fcd-1d860d2b9cea",
+          "BodyWeight": 1,
+          "EyesWeight": 1,
+          "HeadWeight": 1,
+          "Height": 1,
+          "LookAtEnabled": false,
+          "Target": {
+            "_type": "component",
+            "component_id": "7523f332-d056-4461-9002-da15241c0e92",
+            "go": "de3df401-9878-4ff1-b5e8-c2181cb7140d",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Sandbox.CapsuleCollider",
+          "__guid": "a3d246b6-9790-4510-b1d7-9fe8f0601e28",
+          "End": "0,0,19.30002",
+          "IsTrigger": false,
+          "Radius": 14.200013,
+          "Start": "0,0,60.20011",
+          "Static": false
+        },
+        {
+          "__type": "PlayerMovement",
+          "__guid": "b851a11a-90bf-4ff2-849c-6438f6daf984",
+          "EyeAngles": "0,0,0",
+          "RunSpeed": 230,
+          "WalkSpeed": 180
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "76516e29-ad00-4e44-a33b-10194dca48ff",
+          "Name": "Camera",
+          "Position": "3.525095,0.7382785,62.08046",
+          "Rotation": "0.00000004301596,-0.00000000000001065814,0.0000002682209,-1",
+          "Tags": "player_camera",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "dd95ea4c-d057-41fe-b3c0-23b3e58ecbe9",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 80,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 8000,
+              "ZNear": 2
+            },
+            {
+              "__type": "Sandbox.Bloom",
+              "__guid": "4cb69d7e-29fa-4f0e-a7e1-7864ed3fa9a6",
+              "BloomColor": {
+                "color": [
+                  {
+                    "c": "1,1,1,1"
+                  },
+                  {
+                    "t": 1,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "BloomCurve": [
+                {
+                  "y": 0.5
+                },
+                {
+                  "x": 1,
+                  "y": 1
+                }
+              ],
+              "Mode": "Additive",
+              "Strength": 0.5,
+              "Threshold": 0.5,
+              "ThresholdWidth": 0.5
+            },
+            {
+              "__type": "Sandbox.Tonemapping",
+              "__guid": "9609aacf-2059-4736-8542-b8e7e9f45446",
+              "ExposureCompensation": 0,
+              "MaximumExposure": 2,
+              "MinimumExposure": 1,
+              "Rate": 1
+            },
+            {
+              "__type": "Sandbox.Sharpen",
+              "__guid": "bd3566b3-de1f-4596-97d8-2513db4a758d",
+              "Scale": 0.16
+            },
+            {
+              "__type": "UseTrace",
+              "__guid": "66585aaf-04c5-4561-9fd1-2e69515788dd",
+              "ReachDistance": 2000
+            },
+            {
+              "__type": "Sandbox.FilmGrain",
+              "__guid": "280aa387-69b3-4ce1-bbfe-2e75afd6b0b4",
+              "Intensity": 0,
+              "Response": 0.5
+            },
+            {
+              "__type": "FilmGrainController",
+              "__guid": "982275fc-a595-4431-a849-0f0ab3c39101",
+              "FocusObject": {
+                "_type": "gameobject",
+                "go": "45c39a94-ebe4-42b5-a2d1-1e95b7efa9c3"
+              },
+              "FocusRadius": 600,
+              "FocusTime": 5
+            },
+            {
+              "__type": "Sandbox.Vignette",
+              "__guid": "fbec42e0-e09b-471e-a1bf-c5a9ae58f5ed",
+              "Center": "0.5,0.5",
+              "Color": "0,0,0,1",
+              "Intensity": 0,
+              "Roundness": 0,
+              "Smoothness": 0
+            },
+            {
+              "__type": "EnterMapFilter",
+              "__guid": "0d4e9e30-8cd9-4baf-8290-45356934480b",
+              "EyeSpeed": 1,
+              "IntensityTarget": 10,
+              "Ambient": "sounds/ambient.sound",
+              "Static": "sounds/static.sound",
+              "WakeTime": 1
+            },
+            {
+              "__type": "ExitMapFilter",
+              "__guid": "aceac576-75f3-4ce7-82d5-05d3a936f510",
+              "EyeSpeed": 0.05,
+              "IntensityTarget": 5,
+              "TargetMap": "Museum",
+              "Ambient": "sounds/ambient.sound",
+              "Static": "sounds/static.sound"
+            },
+            {
+              "__type": "Sandbox.Highlight",
+              "__guid": "e7fdf3a8-dd4a-4d75-a561-d8cbc7e6c7e4"
+            }
+          ]
+        },
+        {
+          "__guid": "0633434a-0c1b-4318-b540-fa30934d5deb",
+          "Name": "Hud",
+          "Position": "0.2744522,0.0001221194,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "3b06b354-2deb-49f1-807b-aecff3fb3442",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ZIndex": 100
+            },
+            {
+              "__type": "PlayerHud",
+              "__guid": "6a29e3a0-d19c-49e9-9473-35e1d3df783e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "bd2cc62d-0fc8-4d41-8806-a10c63a016f1",
+      "Name": "Testmap",
+      "Position": "16.63339,157.227,-53.35582",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "3f94e14f-87aa-4825-b82c-6b9eab3c793e",
+          "MapName": "tmap_road",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "616dddfb-8985-4c8c-8bc1-a70fadb4f7d6",
+      "Name": "Lighting",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "f2411cdc-d60a-419a-aa23-42b8bc2dab79",
+          "Name": "Sun",
+          "Position": "259.9299,0,481.5289",
+          "Rotation": "0,0.3826835,0,0.9238796",
+          "Tags": "light_directional,light",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "87511a0f-4f6a-4c87-b791-dbe48ae36185",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.23162,0.07905,0.26977,1",
+              "Shadows": true,
+              "SkyColor": "0.05882,0.07451,0.08235,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "c2ce9675-83da-4c19-a56f-8a3829cc099e",
+      "Name": "Portals",
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "dd39a515-5036-4a2c-aef8-5fc81ca41016",
+          "Name": "P1",
+          "Position": "506,143.5087,127",
+          "Rotation": "0.7071068,0,0,0.7071068",
+          "Scale": "20.73604,5.00288,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "870a4ed0-5c47-4cab-a46a-b531ae23d485",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "Teleporter",
+              "__guid": "e2a9c2e4-290c-49f1-b069-c51fcd5b6113",
+              "P_Enabled": true,
+              "TeleportDirection": "0,-140,0"
+            }
+          ]
+        },
+        {
+          "__guid": "b9d18bad-1151-4f3e-9dc0-e25f044b7da4",
+          "Name": "P2",
+          "Position": "506,-141,127",
+          "Rotation": "0.0000001376788,-0.7071068,-0.7071068,0.0000001376788",
+          "Scale": "20.73604,5.00288,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "04849d60-dde3-4ec6-835a-b165ccd8ef56",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "Teleporter",
+              "__guid": "4ef81f6a-bf9b-47e1-9a85-325f8af838ed",
+              "P_Enabled": true,
+              "TeleportDirection": "0,140,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "c78f1163-6438-497a-8093-6b73c77eb1fc",
+      "Name": "Look Triggers",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Children": [
+        {
+          "__guid": "708ddb07-96b7-439b-8baf-a03387b6c467",
+          "Name": "L1",
+          "Position": "506,1165.908,127",
+          "Rotation": "0.7071068,0,0,0.7071068",
+          "Scale": "20.73604,5.00288,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "b24017e6-af4e-4396-b794-b9f5d648d16a",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "c8aaf180-b350-43a0-ab4c-eb0c82bc6d41",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "dfb3dcf1-c70e-4451-8d8d-5838c52a0984",
+                "go": "7e0a2ade-0ff0-4e1a-92d2-7337961fd65e",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "945b4fa8-a3b6-45a8-a69c-eea6139747f8",
+          "Name": "L1 Ground",
+          "Position": "506,774.518,4.913986",
+          "Scale": "20.73604,19.56749,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "7b9fc318-1785-4efc-805b-dd52035282fc",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "cad24310-0e04-4c93-88f4-5a6fba0fb214",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "43d3cc60-d1e9-4546-925f-1957d6944b0e",
+                "go": "566fb9ad-163c-4348-9800-994d88033f34",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "7e0a2ade-0ff0-4e1a-92d2-7337961fd65e",
+          "Name": "L2",
+          "Position": "506,-1171.934,127",
+          "Rotation": "0.0000001376788,-0.7071068,-0.7071068,0.0000001376788",
+          "Scale": "20.73604,5.00288,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "b16f3bfb-c231-4967-a8c6-51a2c13c51cb",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "dfb3dcf1-c70e-4451-8d8d-5838c52a0984",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "c8aaf180-b350-43a0-ab4c-eb0c82bc6d41",
+                "go": "708ddb07-96b7-439b-8baf-a03387b6c467",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "566fb9ad-163c-4348-9800-994d88033f34",
+          "Name": "L2 Ground",
+          "Position": "505.9999,-741.0569,1.298174",
+          "Rotation": "0.00000000000001421085,-0.00000008940697,-1,0.0000001947072",
+          "Scale": "20.73604,23.95188,1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "ebcf2e50-211d-4ef8-82a5-c10b6691ea2e",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,50",
+              "Static": true
+            },
+            {
+              "__type": "LookHaunt",
+              "__guid": "43d3cc60-d1e9-4546-925f-1957d6944b0e",
+              "Control": {
+                "_type": "component",
+                "component_id": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+                "go": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+                "component_type": "GhostScript"
+              },
+              "Opposite": {
+                "_type": "component",
+                "component_id": "cad24310-0e04-4c93-88f4-5a6fba0fb214",
+                "go": "945b4fa8-a3b6-45a8-a69c-eea6139747f8",
+                "component_type": "LookHaunt"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+      "Name": "Haunting",
+      "Position": "217.6445,-10.32373,12.63162",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "GhostScript",
+          "__guid": "c30e62e4-0ae0-488e-bdef-5b54312058c9",
+          "ExitStrategy": {
+            "_type": "component",
+            "component_id": "aceac576-75f3-4ce7-82d5-05d3a936f510",
+            "go": "76516e29-ad00-4e44-a33b-10194dca48ff",
+            "component_type": "ExitMapFilter"
+          },
+          "Player": {
+            "_type": "gameobject",
+            "go": "de3df401-9878-4ff1-b5e8-c2181cb7140d"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "45c39a94-ebe4-42b5-a2d1-1e95b7efa9c3",
+          "Name": "Ghost",
+          "Position": "-2497.072,653.367,-12.76942",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "c0254757-6a6e-46d5-9752-a973b9df1e6c",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "784ff5ab-2075-4746-80e3-7e527cff5d5e",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7f89bea0-f96c-49e3-9286-9da34956d62f",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "f60afc8e-3796-46c9-be92-d5a1d0dc5c6a",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "aaee9427-00ee-4a94-8a08-f0659d0d4aa2",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "75fb477b-beb5-4f6d-bbb4-f39fef01eee1",
+          "Name": "Ghost",
+          "Position": "2328.127,-589.2098,-12.76942",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "96bd7c11-d786-416c-bf63-e9215a50a5b9",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "6855360b-9ed0-4dd5-b9da-8f1e5b92f47b",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c2541c0e-7240-48fb-8536-8828d4d90ae0",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "a78c904e-7fa3-4686-9fd6-4757b21b356f",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "5c7a3fbc-4d86-4ce9-86b7-c496d97f4803",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "4a654ef5-e20f-476a-bbdd-39a39985bf38",
+          "Name": "Ghost",
+          "Position": "-2676.18,653.3668,-12.76942",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "6de94798-3904-45a2-99fb-939d4d95ac65",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "edc30339-054d-4828-be61-730f21a977a9",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6bf304db-83cc-401b-a5ec-884058d7b914",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "0af34a8b-f147-4ccc-abbe-474c53b801ad",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "cca1778f-ab93-4334-86c8-70de4057c389",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "eeffc99f-dd62-4ac8-ba68-f4c83658d89e",
+          "Name": "Ghost",
+          "Position": "2507.237,-589.2098,-12.76942",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "0dc8a557-93ba-4db1-96d4-c842f9756388",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "ab19b48b-763d-496d-a378-31fc554fdd49",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6cd64c4f-cd52-4615-ba81-85e16f59f5ee",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "5ae72030-3b31-45f0-9291-f8ff2b806bf7",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "eb22c61a-5534-4e80-9944-b309f3e39e53",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "5f074844-c751-40b5-954b-7d886ea10210",
+          "Name": "Ghost",
+          "Position": "-2759.087,343.5383,-12.76897",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "b2bfef0f-1c25-4da0-944c-20b7d2235b37",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a8c00904-79cd-4cfd-9bfd-b539e0109226",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "1276581f-8a4d-4233-95c9-88eab1c0c6c3",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "a6a507b7-f24a-4df8-8cfa-a3e5d1e46470",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "199919e4-2020-4ec8-8581-d07ca980f107",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "434059f2-63e2-47c1-9f08-d97425c05714",
+          "Name": "Ghost",
+          "Position": "2590.143,-279.3819,-12.76897",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "df07adbe-e840-4f44-84a6-3957e8993963",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a2fc9adb-ae8f-42bc-91a6-dab15ab54ced",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "fed980b3-d503-4c78-ba9b-e6b1fbfeb53a",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "abbc45f0-a48d-461b-bc24-263d0ea60283",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "b61d5cce-9e69-4d12-b72c-1fc2c06cb4c3",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "32d2759a-da3c-4655-b8ff-ab7dd64a32e2",
+          "Name": "Ghost",
+          "Position": "-2938.198,343.5383,-12.76897",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "e61121f2-995b-4598-adda-b69cfd6ab42d",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "e08293ed-6e82-42b9-965f-32e72da3da0c",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "a9ea8e94-2460-4f82-9553-0e67c7fff399",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "dac8b9c1-9870-490a-af17-197723d3c15d",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "12650c93-ec4e-4e57-811f-cf9b528c8bca",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "a5cd02de-7544-43f4-bfa6-68b36144af18",
+          "Name": "Ghost",
+          "Position": "2769.253,-279.3819,-12.76897",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "63ec5b49-89e3-407e-82c8-c29eb7683b51",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "76e5c22a-0ee0-4173-bc5a-cbfc44089e2c",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ce4901b1-37ee-4a99-8110-5c08bb0b42f1",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "6323cbea-fbbc-4e42-954f-12f4b8df7688",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "44496c63-684f-489b-9b9f-96f323dfcc6f",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "923d246a-a5ef-4181-890a-3cbaae09ca98",
+          "Name": "Ghost",
+          "Position": "-2445.389,171.4557,-12.76959",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "86cd1baf-474c-4734-8c31-fdb828f030f2",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "57989cc4-a360-4ae9-84be-6bdd2a03fbd1",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3b06d88e-5158-4e81-ab23-0b2f67c77175",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "7017a79a-96c1-41b6-a73f-8e7a7b224f78",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "57fde3bd-6219-4ce3-9468-220e9ac3e1af",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "358990a3-7ca1-48e7-b6cf-8615b992c071",
+          "Name": "Ghost",
+          "Position": "2276.446,-107.2991,-12.76959",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "5e7348c1-7910-4e0d-a35e-b77aaeb43480",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "8489f660-4542-4940-be65-47933d4ad0bd",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "afcc88d2-e0e4-410d-a3df-cb7cab92e296",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "7b4a3178-3b5b-4d50-acc4-4ca117ef5924",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "a6f66caa-a4a6-4d52-850d-5fa4f86dddb0",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "c564eff0-3b4d-4e4a-858b-b18b545972dc",
+          "Name": "Ghost",
+          "Position": "-2624.5,171.4557,-12.76959",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "e4a04a61-734d-46c5-8547-dd2bac41cb91",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "b18310b1-6d67-4b79-9677-73375972ea87",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "1bea7f4d-0fad-48a6-885b-f4bada57b433",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "d40f0c92-b3c5-4c71-90c6-6c8a534d5775",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c9e2ac2f-9d14-4a55-8b50-d316ae0ec38c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "bfcb3a58-36f0-4db3-930b-826c13d68606",
+          "Name": "Ghost",
+          "Position": "2455.556,-107.299,-12.76959",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "03d93d82-a13a-4cc2-aabd-0bb67d94aefa",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "c6986d44-81c2-482e-a195-5843408c4cbf",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c5707c72-6ac8-417b-9240-0ce13ac7e9b5",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "083ea137-52db-4c49-8398-0bf22fd78a88",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "01a4a7ac-afdc-497b-8944-8b8c5229a699",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "93cd976e-1491-4dc3-a2a7-f3e51b9cfd1e",
+          "Name": "Ghost",
+          "Position": "-2708.914,-278.8848,-12.76934",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "33b838bc-d100-4d89-824f-7d7566fd459f",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "51dbf972-275f-4a20-9dca-7d8cf919ed1d",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3570c0b0-7258-4c5c-a483-a7301a10d1cb",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "78c3e1dd-4cd1-4ff9-8cdf-bb0c21a0911f",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "83be092d-b0e8-44a1-9520-bff3eabf3c0b",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "9ca71aee-d3fa-4b09-bc70-14044c229117",
+          "Name": "Ghost",
+          "Position": "2539.969,343.0405,-12.76934",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "82dbcbb2-2820-4548-a1b7-6a3a774a85aa",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "6b63816d-c970-4cf5-86cf-22eb37c56c01",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f4d4f7dd-92c4-4af0-953e-b3ff729bc4e4",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "617bdbb0-4102-4743-ab90-21a8a27d46e5",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ae5b5d76-fb7b-45a2-a6f2-83da50ccf502",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "a63c2769-a82e-4596-98e2-04a9079d8030",
+          "Name": "Ghost",
+          "Position": "-2888.022,-278.8846,-12.76934",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "bb448aba-fd03-4b2e-b693-9f0b9eab470b",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "120efedf-af79-45c0-9772-474ab63bd853",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "2ed54d13-dc60-4a3a-90ad-d747db181f2b",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "6fca3416-2d01-4474-a208-ff757131c5a3",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "88ee0c61-1790-4a66-8d0d-ba78e8a81c5c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "1a144e38-ed1c-41a3-9450-d1b330db4b78",
+          "Name": "Ghost",
+          "Position": "2719.079,343.0405,-12.76934",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "9329a3a6-1216-471a-b5aa-0f7a9818de3b",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "03cc3dfe-e86d-4b16-8f58-0697f5982d53",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "93f5f1b7-b47b-41d3-a4d0-619386f230dc",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "8e08333a-1c95-4774-a13e-115437ce47e9",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ad23e669-0962-4b5f-b07d-19d56bb3c47c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "122320a6-8bc2-4443-b65b-207360e47c05",
+          "Name": "Ghost",
+          "Position": "-2435.063,-6.541328,-12.76924",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "00ab3851-e933-4841-a76c-fb9d6b173e33",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0fb3086a-d3d3-4be8-9696-c814caf4ecaa",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "761b1fe4-1f64-414a-85fe-e66b54fe00a5",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "f455ef4e-79b2-4cea-b814-f0978ee983d3",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "dbf994d4-1843-4df9-83ae-bae2dc1a32c4",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "b206c2f2-df8e-4ca7-a7fc-a0b356c5c3ea",
+          "Name": "Ghost",
+          "Position": "2266.12,70.69757,-12.76924",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "3b1f052a-f680-422a-9fdd-81b59af971fe",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "bec3d85c-0789-415d-ada1-b6ca1b6a627f",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "edb87d50-34a5-40a8-afe7-1feb66e68e7d",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "1de00b6f-0fba-40d8-b086-e7ef5a2bd891",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "2cb0346c-8f53-48d8-9499-586019be906c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8d606cb0-06ef-402a-88bc-66dffce0603c",
+          "Name": "Ghost",
+          "Position": "-2614.174,-6.541299,-12.76924",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "073ba5d4-08ed-4249-9220-2a0dce044025",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "9910c30e-e99a-49d7-b6aa-c47b8c8bd988",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e6e2a642-6fc3-4fb3-8f69-3c3cb5067208",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "df29eb14-7344-494f-beab-4c86dad52306",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3002590b-88ce-4c2d-bc47-7acbd661a792",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "28fc4728-3fd0-4fe8-96cb-08053035bf53",
+          "Name": "Ghost",
+          "Position": "2445.229,70.6976,-12.76924",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "ad6bfe65-4c6d-4757-b153-daac22a667c5",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "c94b907c-94f0-4680-86b4-953957e3dc3e",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "51404aba-1b13-44bb-be7b-de9f7665642d",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "2733ab42-1558-400f-a5e0-8d076022ea0b",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "573e9a9f-210d-4dd4-8547-5dc15d0e3626",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "6a25521e-3f0b-461c-9ac1-2a0a2b7ed20b",
+          "Name": "Ghost",
+          "Position": "-2522.86,-558.9097,-12.76856",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "19882e6a-69b9-4cd3-9c92-7e48d567b464",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "31c456dc-f17a-48d7-a69f-62dfc4bb4e69",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "86693c43-af33-40bb-af2e-55cde3fc8998",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "c4a70d01-7b8c-4235-aa25-a55974b9884d",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "63e7ec99-d022-4a07-aada-3a64b2298e4f",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "e2c3e300-860b-4463-b389-6f2d189f46ec",
+          "Name": "Ghost",
+          "Position": "2353.916,623.0652,-12.76856",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "9c031671-9601-48f3-bdb5-7d35c57690c9",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "421b07bd-0c08-4a01-a1de-da447156a3db",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "4aaaf188-747f-4796-a01e-9752311ecb43",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "e5f26d37-e1d9-43f9-adcf-67de0b78958a",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e02a83b3-932d-471e-a145-da50d0e30d1d",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "00b86e59-3eb6-4549-980e-88fe634a952a",
+          "Name": "Ghost",
+          "Position": "-2701.97,-558.9094,-12.76856",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "4222529f-2d02-4fc2-85d0-df4cdee64e79",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "500d1b2d-f32b-445b-b48d-5eb254789f7b",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "4ad8bb8d-359e-45ef-aa8f-d6d23d6ee227",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "66579b16-813c-4888-a005-7b9a6c6053a3",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6edd3065-592c-439d-b337-918233f0ba71",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "b520d68d-daa4-4571-9f43-c26cb1728dce",
+          "Name": "Ghost",
+          "Position": "2533.025,623.0641,-12.76856",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "91227db7-a70a-4a58-a898-8d6af265349a",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "18eda25d-eb78-4317-85e5-4edde2eebc0e",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3fe51598-8e74-4e68-b11b-0eaa3e8ef02a",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "4b3b6f2c-711b-401b-a745-d452f358499b",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ce889142-ab36-4320-b11d-4d60d9796d13",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "6fe546c7-4873-4fb5-a66d-3999b7c055b5",
+          "Name": "Ghost",
+          "Position": "-2170.655,-277.0192,-12.76902",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "0fd6914d-3223-49f6-9730-6cacf034a3c9",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "776bb273-d4af-490b-a516-da80ebe09adf",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "8c93a24d-b52d-43f3-862f-ec387c2e387c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "7ee54554-aef7-4bf2-b789-4410537ed3aa",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c6a67598-d715-4379-8826-23b1cd156060",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "200ddff7-d89a-49c4-bc9c-b74d77391517",
+          "Name": "Ghost",
+          "Position": "2001.711,341.1743,-12.76902",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "903cd29a-379d-45e4-9fed-32fe51d95c9f",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a269110a-08be-429a-9b6c-48bdf859a988",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "347793e8-c69d-4f07-b382-41f32807bd82",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "f4d585b0-a77a-4123-91cf-7ccfca5653d0",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7661c87e-6769-4e0c-8eaf-2296c865ab7f",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "3d591f49-515c-4093-b21e-c19cc1c5411b",
+          "Name": "Ghost",
+          "Position": "-2349.764,-277.0191,-12.76902",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "cef060b4-2c9b-44bf-a38a-84bd61265b92",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "760d48b4-06c9-42bf-9153-c24078227b41",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "af430620-dd71-492c-a1af-6c2710a31412",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "2a67e8c1-ac72-483b-9036-28432ec72aca",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f4678929-1479-4963-ad96-a78cb7552e01",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "de83609f-ee0d-4c68-851f-59e8d615d276",
+          "Name": "Ghost",
+          "Position": "2180.82,341.1744,-12.76902",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "f135960a-835e-45ca-b3d8-b8f839cb899b",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "81d975ab-0b5d-4aba-aca0-1a3735ee6cde",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ebd49c1e-9a48-4528-96e2-afe29c67be8e",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "fb1ff9d9-bc75-4cbc-99ee-0be5b744f740",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "be20e565-482c-4669-b489-2e01cac7fd3f",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8cd4dc06-791d-4efd-8dc2-c04484b40f20",
+          "Name": "Ghost",
+          "Position": "-2165.87,467.2598,-12.76899",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "8d5b77d7-6611-4bbd-8f43-5ed07e8354c0",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "a96b6def-0e28-4a71-962e-03df59a130f6",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "d816d349-86aa-45d5-8b9f-326f024fa7d7",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "b4ae350e-e308-4ccd-9634-438a240d082f",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "757744cc-813c-4dee-9a5f-7d5bd42dc674",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "15d64c42-5b64-4a75-b617-fe3e162bcadd",
+          "Name": "Ghost",
+          "Position": "1996.927,-403.1028,-12.76899",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "977adf49-7d28-4e0f-8d18-e66c6a681a42",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "1c01e3c1-13df-4f6f-b772-8184b7dea1de",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f1c6f2a7-a56d-45cd-9a97-2c5adcd20155",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "2f9a2d97-74a3-4352-9df3-c85e0611d42f",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7b3c563a-4c7b-453e-8697-47b82460e76c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "f0d57457-52eb-443f-9cb0-997f247f4446",
+          "Name": "Ghost",
+          "Position": "-2344.979,467.2597,-12.76899",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "f1b5f4b9-fef4-44da-86f5-37b4b0b6fdae",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5630a594-dc8e-4ae1-ada7-5807769f332b",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "72898230-acd1-4548-adae-acf224bf4410",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "c311edcf-844f-484a-b226-31cd4b4465bb",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "9c54ecad-790a-451d-bade-43279606cf84",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "0d1dba8e-919b-4813-9841-26c39f5877ed",
+          "Name": "Ghost",
+          "Position": "2176.036,-403.1028,-12.76899",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "4f56d1b1-98a9-4807-8d97-cf03c0a58539",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "916593ce-a054-44b6-9ddb-6a50fa591c7a",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "16f9925a-eb80-47b3-b9b5-b69545109d55",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "79cc6cc7-32b9-4491-ace9-b8fde0cc0060",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e7395690-0f9f-47e6-aa24-ee69b83488dd",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "127d3b7c-5a3e-43a3-953c-b536ef3fa21d",
+          "Name": "Ghost",
+          "Position": "-2681.54,-418.5978,-12.76832",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "0b6c85ee-bf8e-4d0b-8d74-4f58ad3999cd",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "ebf4aced-a399-4a35-bda6-7e1fc9426ab3",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f0171212-20e1-44af-8244-b3d96ecbcc8c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "0bbf93ef-804e-457d-8333-9d76624a8cac",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e26f9d5a-846b-4db4-ae22-b904d4b568bc",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "045b20a1-5a54-4027-bb58-0b265d87dffd",
+          "Name": "Ghost",
+          "Position": "2512.595,482.7533,-12.76832",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "42d60f3b-37be-4f03-bf4a-2c9cea4d7996",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "06749a08-415f-4296-9efa-48fe501132d9",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f69a281f-3c3b-4e62-9178-46d1ae14beb2",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "7bb75a06-48b6-4208-933a-6c09d69a3315",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "1f9ab5e6-6344-46ad-941d-ba563d0f29b7",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "4fd8f593-46e6-402d-8bb1-9834ac8886cb",
+          "Name": "Ghost",
+          "Position": "-2860.649,-418.5974,-12.76832",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "480064be-ddfe-446f-b4c9-2133941fbeea",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "41c00d37-84be-4c8b-a075-99a0ee945839",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7703d99d-b138-4260-bb2c-bd4004d3f5b3",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "6c179dc9-adb1-4c7e-8823-2ebec0bb9c89",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "18d23a28-21bc-4ca7-8f52-5d19ee77ab55",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "c573a7f0-274f-4100-a2a2-c60ca72c5b79",
+          "Name": "Ghost",
+          "Position": "2691.705,482.7534,-12.76832",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "ef601618-8285-4a3b-982d-12bbefbeb1e0",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "625c283b-2416-4ba9-b92e-0e3119a89725",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7f61d2ac-2365-490c-8245-cbfd560e80b9",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "a576ec3d-188e-4fbd-b734-7c996d74c257",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f6e453e5-1f6c-4c45-abac-3ce62cd847f2",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "88bdf650-77f8-4f58-8004-beed02ec3669",
+          "Name": "Ghost",
+          "Position": "-2958.112,-84.51938,-12.76885",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "da79dd0f-0e2f-4a66-a117-ba7f98506a3e",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "156213c6-1c8c-454e-bf1b-12fde808f335",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "50386f2c-5e92-49eb-baa3-1f83ed1adac3",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "d8c48a4b-590c-4f3d-9077-4c16e693e2a8",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "a13168cd-5ac0-4573-a335-7d91ac2389c8",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "4b4bc752-8280-490d-bd74-a3d198409c8b",
+          "Name": "Ghost",
+          "Position": "2789.167,148.6757,-12.76885",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "b9d5571f-c0be-4ed0-87d3-1bcd4fa4e7fb",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "1719fff9-4c69-463b-a4fb-0164b242cb50",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "7210df76-f816-4232-ad87-d7d8a197d646",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "f2821777-6739-45c5-9129-840f813e2f85",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ec56366a-3a2c-4fcf-90c9-2569354db56d",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "6ac0039e-5b69-4faf-b98b-f5fa036b32fc",
+          "Name": "Ghost",
+          "Position": "-3137.22,-84.51929,-12.76885",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "9fde5229-5536-420e-af2d-76dc5d77b579",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "83f0d12e-65e9-4ebf-a00e-ccbe9544fe63",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "14c2bd48-122e-43f2-b5ac-a1bff15ca971",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "4173f4aa-e682-4d46-9815-661b58bfa81e",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c6148036-b869-4e83-8d18-d66c2fe8cb57",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "69b11910-a217-4344-8b20-81acddbcb971",
+          "Name": "Ghost",
+          "Position": "2968.276,148.6758,-12.76885",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "d32c6400-350d-4c6b-bfcf-7f9ee2bf9448",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "2bc71416-379f-4def-9e31-e6faa0bb90ae",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3f42da0f-58ba-4f26-9ae3-908bc575536c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "6daca171-d210-4045-ae6c-bc74dc0b113f",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "606c4e0b-1d10-4122-95e8-7045f43b23bf",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7b37d882-f4f1-467d-b69e-b214d67d820c",
+          "Name": "Ghost",
+          "Position": "-2033.795,193.9794,-12.76927",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "56faa6c8-4122-489f-b1de-93558f33a5b1",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "fbfbd8a0-a2d1-44fc-8e77-01c20075476d",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "b751851c-6003-4f3b-8328-6565db857826",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "8c1fdda2-9674-4fd7-bf5c-7543bd006bb8",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "be175af4-7386-45e5-ad66-d693cb8d396a",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "50fb2363-666f-4b03-9792-24985d3e9636",
+          "Name": "Ghost",
+          "Position": "1864.852,-129.8231,-12.76927",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "5e554d40-704f-4a22-bc03-312049881bd8",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "6022e4b0-38f3-4be2-9ddd-84dfa7ec8436",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "33b2a428-87ed-422f-8944-a0cc0296e2e2",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "5552ae17-9171-415a-bd3a-f3fceb62868d",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ba9d15cf-eb21-41d4-9718-163d02b0f667",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "9c2c4ee9-1e4f-4860-8e6e-aad661024b89",
+          "Name": "Ghost",
+          "Position": "-2212.906,193.9794,-12.76927",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "b7665a5a-9b5e-4583-b269-4dcfe4b63e14",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "71b031e0-b2de-4a94-9dd6-748aafa7be17",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "59879c3e-9e14-42df-850b-c33eac5c3953",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "47bb3334-6b58-48c6-8267-386025896736",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "d36b80dd-1319-4e7b-83aa-2ba70b341927",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "de9df2b9-acb7-4725-b95d-2d86bfa7ceaa",
+          "Name": "Ghost",
+          "Position": "2043.962,-129.8233,-12.76927",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "c95644a8-c5d0-4f18-a47c-8279041491c2",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "56f8ef56-2caa-4ba5-a560-8fc5d60ee2db",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "df128849-1e32-45e8-be32-f674e47fd988",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "07772e4f-c15c-4953-a880-e7d2313fa3ff",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "8212156c-8154-4d71-b72d-75a636bdaa20",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "8283c99d-f191-45ca-a336-f21e3ff9f196",
+          "Name": "Ghost",
+          "Position": "-1979.29,-374.168,-12.76931",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "f12f0c21-3374-48f3-a938-4a25c6e42ed0",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "513807d5-f679-4443-9df4-1931e456e239",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "0d367e9f-e274-41cb-beee-baa095896114",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "c12e50d5-2c64-43cc-bdbe-7fef1bd0237b",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "1ed11145-8eb9-46c8-9784-efb91abfa798",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "58e7b5eb-bfd8-4656-93c8-3833926e8958",
+          "Name": "Ghost",
+          "Position": "1810.347,438.3233,-12.76931",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "cf2fce0c-5347-4b79-a999-b8cb1475eb99",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "5452401d-e02a-4379-8ff9-e85204e23a2f",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "25974fde-b4ef-4c43-bb78-a9043e5db0e5",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "466095ab-2596-45f4-b519-2abfc4e43080",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c5e00aaf-5178-4d07-8804-aff73935a7b4",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "9812fc30-0e5d-4331-a56a-4b8e9a8d08f2",
+          "Name": "Ghost",
+          "Position": "-2158.399,-374.1676,-12.76931",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "beebce3a-bf1f-4680-9d6a-ac10a37ec71b",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "ebf6d0ac-d4d4-40f6-8c4c-530e0162be89",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "51d4a5dd-104c-4353-b838-8e5d780c3b9c",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "ddc9cc8b-fff4-4e24-b7c8-8cd7e4d07a9c",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "006d9bba-9121-4b94-8e46-b064f47f9832",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "7bf4c58d-4164-47e8-bd98-d113c16d8f4f",
+          "Name": "Ghost",
+          "Position": "1989.457,438.3233,-12.76931",
+          "Rotation": "0,0,-0.9999999,0.0000001490116",
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "440666c9-58df-4496-b478-38818a81d989",
+              "BodyGroups": 341,
+              "CreateBoneObjects": false,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "0.05959,0.16279,0.03104,1"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "084af703-101d-4744-bbc9-34e651e70c48",
+              "Name": "Point Light",
+              "Position": "8.72363,3.996034,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "26a194e1-18f8-4542-acef-f04c8fdcd6e2",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            },
+            {
+              "__guid": "cd63e5eb-1a91-4bc3-86ae-34e1ea0e0ab3",
+              "Name": "Point Light",
+              "Position": "8.723628,-3.339598,63.09814",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "a15577dd-0aed-406b-8d9d-89438a8b3be1",
+                  "Attenuation": 10,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0,0,1",
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "f34330ce-55e6-44fa-b415-18428c30c917",
+      "Name": "Text",
+      "Position": "383.9041,-19.20255,66.36413",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.TextRenderer",
+          "__guid": "6b04f54e-a753-4a2e-83c3-4b07dab8dad1",
+          "Color": "0.20784,0.65882,0.76078,1",
+          "FontFamily": "Poppins",
+          "FontSize": 64,
+          "Scale": 0.3,
+          "Text": "I feel like I\u0027m trapped"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "road",
+  "Description": "",
+  "LastSaved": "2024-04-12T12:42:43.8438514-04:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

@@ -1,0 +1,36 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "tmap_museum",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "tmap_museum",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "tiowevolve.dev_orange_03#52991",
+        "rustextended.metal_grate_b#43303",
+        "sugmatextures.diamondpatterncarpet#34970",
+        "sundayservice.facade011#36014",
+        "crystalsilence.loomingsky#31308",
+        "fennec.night_sky_1#24390",
+        "caro.citynight#28309",
+        "polyhaven.the_sky_is_on_fire#30343",
+        "semxy.bowieskybox#24718",
+        "apetavern.grass_01a#46402",
+        "apetavern.sheet_metal_01a#46369"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/tmap_museum.vmap"
+      }
+    }
+  }
+}
