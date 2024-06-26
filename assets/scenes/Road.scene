@@ -3,12 +3,14 @@
   "GameObjects": [
     {
       "__guid": "de3df401-9878-4ff1-b5e8-c2181cb7140d",
+      "Flags": 0,
       "Name": "Player",
       "Position": "217.6445,-10.32373,12.63162",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.SkinnedModelRenderer",
@@ -17,7 +19,8 @@
           "CreateBoneObjects": false,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         },
         {
           "__type": "Sandbox.CharacterController",
@@ -28,7 +31,8 @@
           "Height": 64,
           "IgnoreLayers": "",
           "Radius": 16,
-          "StepHeight": 18
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -65,12 +69,14 @@
       "Children": [
         {
           "__guid": "76516e29-ad00-4e44-a33b-10194dca48ff",
+          "Flags": 0,
           "Name": "Camera",
           "Position": "3.525095,0.7382785,62.08046",
           "Rotation": "0.00000004301596,-0.00000000000001065814,0.0000002682209,-1",
           "Tags": "player_camera",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -121,9 +127,13 @@
             {
               "__type": "Sandbox.Tonemapping",
               "__guid": "9609aacf-2059-4736-8542-b8e7e9f45446",
+              "__version": 1,
+              "ExposureBias": 2,
               "ExposureCompensation": 0,
+              "ExposureMethod": "RGB",
               "MaximumExposure": 2,
               "MinimumExposure": 1,
+              "Mode": "Legacy",
               "Rate": 1
             },
             {
@@ -187,10 +197,12 @@
         },
         {
           "__guid": "0633434a-0c1b-4318-b540-fa30934d5deb",
+          "Flags": 0,
           "Name": "Hud",
           "Position": "0.2744522,0.0001221194,0",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ScreenPanel",
@@ -210,10 +222,11 @@
     },
     {
       "__guid": "bd2cc62d-0fc8-4d41-8806-a10c63a016f1",
-      "Name": "Testmap",
-      "Position": "16.63339,157.227,-53.35582",
+      "Flags": 0,
+      "Name": "Hammer Map",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.MapInstance",
@@ -226,18 +239,22 @@
     },
     {
       "__guid": "616dddfb-8985-4c8c-8bc1-a70fadb4f7d6",
+      "Flags": 0,
       "Name": "Lighting",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "f2411cdc-d60a-419a-aa23-42b8bc2dab79",
+          "Flags": 0,
           "Name": "Sun",
           "Position": "259.9299,0,481.5289",
           "Rotation": "0,0.3826835,0,0.9238796",
           "Tags": "light_directional,light",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
@@ -254,17 +271,21 @@
     },
     {
       "__guid": "c2ce9675-83da-4c19-a56f-8a3829cc099e",
+      "Flags": 0,
       "Name": "Portals",
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "dd39a515-5036-4a2c-aef8-5fc81ca41016",
+          "Flags": 0,
           "Name": "P1",
           "Position": "506,143.5087,127",
           "Rotation": "0.7071068,0,0,0.7071068",
           "Scale": "20.73604,5.00288,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -284,12 +305,14 @@
         },
         {
           "__guid": "b9d18bad-1151-4f3e-9dc0-e25f044b7da4",
+          "Flags": 0,
           "Name": "P2",
           "Position": "506,-141,127",
           "Rotation": "0.0000001376788,-0.7071068,-0.7071068,0.0000001376788",
           "Scale": "20.73604,5.00288,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -311,18 +334,22 @@
     },
     {
       "__guid": "c78f1163-6438-497a-8093-6b73c77eb1fc",
+      "Flags": 0,
       "Name": "Look Triggers",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "708ddb07-96b7-439b-8baf-a03387b6c467",
+          "Flags": 0,
           "Name": "L1",
           "Position": "506,1165.908,127",
           "Rotation": "0.7071068,0,0,0.7071068",
           "Scale": "20.73604,5.00288,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -352,11 +379,13 @@
         },
         {
           "__guid": "945b4fa8-a3b6-45a8-a69c-eea6139747f8",
+          "Flags": 0,
           "Name": "L1 Ground",
           "Position": "506,774.518,4.913986",
           "Scale": "20.73604,19.56749,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -386,12 +415,14 @@
         },
         {
           "__guid": "7e0a2ade-0ff0-4e1a-92d2-7337961fd65e",
+          "Flags": 0,
           "Name": "L2",
           "Position": "506,-1171.934,127",
           "Rotation": "0.0000001376788,-0.7071068,-0.7071068,0.0000001376788",
           "Scale": "20.73604,5.00288,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -421,12 +452,14 @@
         },
         {
           "__guid": "566fb9ad-163c-4348-9800-994d88033f34",
+          "Flags": 0,
           "Name": "L2 Ground",
           "Position": "505.9999,-741.0569,1.298174",
           "Rotation": "0.00000000000001421085,-0.00000008940697,-1,0.0000001947072",
           "Scale": "20.73604,23.95188,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -458,11 +491,13 @@
     },
     {
       "__guid": "c9b43eea-728c-4ab7-9022-4b5e6223ede0",
+      "Flags": 0,
       "Name": "Haunting",
       "Position": "217.6445,-10.32373,12.63162",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "GhostScript",
@@ -482,9 +517,11 @@
       "Children": [
         {
           "__guid": "45c39a94-ebe4-42b5-a2d1-1e95b7efa9c3",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2497.072,653.367,-12.76942",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -493,17 +530,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "784ff5ab-2075-4746-80e3-7e527cff5d5e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -519,11 +559,13 @@
             },
             {
               "__guid": "f60afc8e-3796-46c9-be92-d5a1d0dc5c6a",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -541,10 +583,12 @@
         },
         {
           "__guid": "75fb477b-beb5-4f6d-bbb4-f39fef01eee1",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2328.127,-589.2098,-12.76942",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -553,17 +597,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "6855360b-9ed0-4dd5-b9da-8f1e5b92f47b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -579,11 +626,13 @@
             },
             {
               "__guid": "a78c904e-7fa3-4686-9fd6-4757b21b356f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -601,9 +650,11 @@
         },
         {
           "__guid": "4a654ef5-e20f-476a-bbdd-39a39985bf38",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2676.18,653.3668,-12.76942",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -612,17 +663,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "edc30339-054d-4828-be61-730f21a977a9",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -638,11 +692,13 @@
             },
             {
               "__guid": "0af34a8b-f147-4ccc-abbe-474c53b801ad",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -660,10 +716,12 @@
         },
         {
           "__guid": "eeffc99f-dd62-4ac8-ba68-f4c83658d89e",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2507.237,-589.2098,-12.76942",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -672,17 +730,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "ab19b48b-763d-496d-a378-31fc554fdd49",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -698,11 +759,13 @@
             },
             {
               "__guid": "5ae72030-3b31-45f0-9291-f8ff2b806bf7",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -720,9 +783,11 @@
         },
         {
           "__guid": "5f074844-c751-40b5-954b-7d886ea10210",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2759.087,343.5383,-12.76897",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -731,17 +796,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "a8c00904-79cd-4cfd-9bfd-b539e0109226",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -757,11 +825,13 @@
             },
             {
               "__guid": "a6a507b7-f24a-4df8-8cfa-a3e5d1e46470",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -779,10 +849,12 @@
         },
         {
           "__guid": "434059f2-63e2-47c1-9f08-d97425c05714",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2590.143,-279.3819,-12.76897",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -791,17 +863,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "a2fc9adb-ae8f-42bc-91a6-dab15ab54ced",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -817,11 +892,13 @@
             },
             {
               "__guid": "abbc45f0-a48d-461b-bc24-263d0ea60283",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -839,9 +916,11 @@
         },
         {
           "__guid": "32d2759a-da3c-4655-b8ff-ab7dd64a32e2",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2938.198,343.5383,-12.76897",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -850,17 +929,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "e08293ed-6e82-42b9-965f-32e72da3da0c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -876,11 +958,13 @@
             },
             {
               "__guid": "dac8b9c1-9870-490a-af17-197723d3c15d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -898,10 +982,12 @@
         },
         {
           "__guid": "a5cd02de-7544-43f4-bfa6-68b36144af18",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2769.253,-279.3819,-12.76897",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -910,17 +996,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "76e5c22a-0ee0-4173-bc5a-cbfc44089e2c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -936,11 +1025,13 @@
             },
             {
               "__guid": "6323cbea-fbbc-4e42-954f-12f4b8df7688",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -958,9 +1049,11 @@
         },
         {
           "__guid": "923d246a-a5ef-4181-890a-3cbaae09ca98",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2445.389,171.4557,-12.76959",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -969,17 +1062,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "57989cc4-a360-4ae9-84be-6bdd2a03fbd1",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -995,11 +1091,13 @@
             },
             {
               "__guid": "7017a79a-96c1-41b6-a73f-8e7a7b224f78",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1017,10 +1115,12 @@
         },
         {
           "__guid": "358990a3-7ca1-48e7-b6cf-8615b992c071",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2276.446,-107.2991,-12.76959",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1029,17 +1129,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "8489f660-4542-4940-be65-47933d4ad0bd",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1055,11 +1158,13 @@
             },
             {
               "__guid": "7b4a3178-3b5b-4d50-acc4-4ca117ef5924",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1077,9 +1182,11 @@
         },
         {
           "__guid": "c564eff0-3b4d-4e4a-858b-b18b545972dc",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2624.5,171.4557,-12.76959",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1088,17 +1195,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "b18310b1-6d67-4b79-9677-73375972ea87",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1114,11 +1224,13 @@
             },
             {
               "__guid": "d40f0c92-b3c5-4c71-90c6-6c8a534d5775",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1136,10 +1248,12 @@
         },
         {
           "__guid": "bfcb3a58-36f0-4db3-930b-826c13d68606",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2455.556,-107.299,-12.76959",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1148,17 +1262,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "c6986d44-81c2-482e-a195-5843408c4cbf",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1174,11 +1291,13 @@
             },
             {
               "__guid": "083ea137-52db-4c49-8398-0bf22fd78a88",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1196,9 +1315,11 @@
         },
         {
           "__guid": "93cd976e-1491-4dc3-a2a7-f3e51b9cfd1e",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2708.914,-278.8848,-12.76934",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1207,17 +1328,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "51dbf972-275f-4a20-9dca-7d8cf919ed1d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1233,11 +1357,13 @@
             },
             {
               "__guid": "78c3e1dd-4cd1-4ff9-8cdf-bb0c21a0911f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1255,10 +1381,12 @@
         },
         {
           "__guid": "9ca71aee-d3fa-4b09-bc70-14044c229117",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2539.969,343.0405,-12.76934",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1267,17 +1395,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "6b63816d-c970-4cf5-86cf-22eb37c56c01",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1293,11 +1424,13 @@
             },
             {
               "__guid": "617bdbb0-4102-4743-ab90-21a8a27d46e5",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1315,9 +1448,11 @@
         },
         {
           "__guid": "a63c2769-a82e-4596-98e2-04a9079d8030",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2888.022,-278.8846,-12.76934",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1326,17 +1461,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "120efedf-af79-45c0-9772-474ab63bd853",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1352,11 +1490,13 @@
             },
             {
               "__guid": "6fca3416-2d01-4474-a208-ff757131c5a3",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1374,10 +1514,12 @@
         },
         {
           "__guid": "1a144e38-ed1c-41a3-9450-d1b330db4b78",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2719.079,343.0405,-12.76934",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1386,17 +1528,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "03cc3dfe-e86d-4b16-8f58-0697f5982d53",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1412,11 +1557,13 @@
             },
             {
               "__guid": "8e08333a-1c95-4774-a13e-115437ce47e9",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1434,9 +1581,11 @@
         },
         {
           "__guid": "122320a6-8bc2-4443-b65b-207360e47c05",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2435.063,-6.541328,-12.76924",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1445,17 +1594,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "0fb3086a-d3d3-4be8-9696-c814caf4ecaa",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1471,11 +1623,13 @@
             },
             {
               "__guid": "f455ef4e-79b2-4cea-b814-f0978ee983d3",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1493,10 +1647,12 @@
         },
         {
           "__guid": "b206c2f2-df8e-4ca7-a7fc-a0b356c5c3ea",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2266.12,70.69757,-12.76924",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1505,17 +1661,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "bec3d85c-0789-415d-ada1-b6ca1b6a627f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1531,11 +1690,13 @@
             },
             {
               "__guid": "1de00b6f-0fba-40d8-b086-e7ef5a2bd891",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1553,9 +1714,11 @@
         },
         {
           "__guid": "8d606cb0-06ef-402a-88bc-66dffce0603c",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2614.174,-6.541299,-12.76924",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1564,17 +1727,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "9910c30e-e99a-49d7-b6aa-c47b8c8bd988",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1590,11 +1756,13 @@
             },
             {
               "__guid": "df29eb14-7344-494f-beab-4c86dad52306",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1612,10 +1780,12 @@
         },
         {
           "__guid": "28fc4728-3fd0-4fe8-96cb-08053035bf53",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2445.229,70.6976,-12.76924",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1624,17 +1794,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "c94b907c-94f0-4680-86b4-953957e3dc3e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1650,11 +1823,13 @@
             },
             {
               "__guid": "2733ab42-1558-400f-a5e0-8d076022ea0b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1672,9 +1847,11 @@
         },
         {
           "__guid": "6a25521e-3f0b-461c-9ac1-2a0a2b7ed20b",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2522.86,-558.9097,-12.76856",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1683,17 +1860,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "31c456dc-f17a-48d7-a69f-62dfc4bb4e69",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1709,11 +1889,13 @@
             },
             {
               "__guid": "c4a70d01-7b8c-4235-aa25-a55974b9884d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1731,10 +1913,12 @@
         },
         {
           "__guid": "e2c3e300-860b-4463-b389-6f2d189f46ec",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2353.916,623.0652,-12.76856",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1743,17 +1927,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "421b07bd-0c08-4a01-a1de-da447156a3db",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1769,11 +1956,13 @@
             },
             {
               "__guid": "e5f26d37-e1d9-43f9-adcf-67de0b78958a",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1791,9 +1980,11 @@
         },
         {
           "__guid": "00b86e59-3eb6-4549-980e-88fe634a952a",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2701.97,-558.9094,-12.76856",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1802,17 +1993,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "500d1b2d-f32b-445b-b48d-5eb254789f7b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1828,11 +2022,13 @@
             },
             {
               "__guid": "66579b16-813c-4888-a005-7b9a6c6053a3",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1850,10 +2046,12 @@
         },
         {
           "__guid": "b520d68d-daa4-4571-9f43-c26cb1728dce",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2533.025,623.0641,-12.76856",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1862,17 +2060,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "18eda25d-eb78-4317-85e5-4edde2eebc0e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1888,11 +2089,13 @@
             },
             {
               "__guid": "4b3b6f2c-711b-401b-a745-d452f358499b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1910,9 +2113,11 @@
         },
         {
           "__guid": "6fe546c7-4873-4fb5-a66d-3999b7c055b5",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2170.655,-277.0192,-12.76902",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1921,17 +2126,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "776bb273-d4af-490b-a516-da80ebe09adf",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1947,11 +2155,13 @@
             },
             {
               "__guid": "7ee54554-aef7-4bf2-b789-4410537ed3aa",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1969,10 +2179,12 @@
         },
         {
           "__guid": "200ddff7-d89a-49c4-bc9c-b74d77391517",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2001.711,341.1743,-12.76902",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -1981,17 +2193,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "a269110a-08be-429a-9b6c-48bdf859a988",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2007,11 +2222,13 @@
             },
             {
               "__guid": "f4d585b0-a77a-4123-91cf-7ccfca5653d0",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2029,9 +2246,11 @@
         },
         {
           "__guid": "3d591f49-515c-4093-b21e-c19cc1c5411b",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2349.764,-277.0191,-12.76902",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2040,17 +2259,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "760d48b4-06c9-42bf-9153-c24078227b41",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2066,11 +2288,13 @@
             },
             {
               "__guid": "2a67e8c1-ac72-483b-9036-28432ec72aca",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2088,10 +2312,12 @@
         },
         {
           "__guid": "de83609f-ee0d-4c68-851f-59e8d615d276",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2180.82,341.1744,-12.76902",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2100,17 +2326,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "81d975ab-0b5d-4aba-aca0-1a3735ee6cde",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2126,11 +2355,13 @@
             },
             {
               "__guid": "fb1ff9d9-bc75-4cbc-99ee-0be5b744f740",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2148,9 +2379,11 @@
         },
         {
           "__guid": "8cd4dc06-791d-4efd-8dc2-c04484b40f20",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2165.87,467.2598,-12.76899",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2159,17 +2392,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "a96b6def-0e28-4a71-962e-03df59a130f6",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2185,11 +2421,13 @@
             },
             {
               "__guid": "b4ae350e-e308-4ccd-9634-438a240d082f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2207,10 +2445,12 @@
         },
         {
           "__guid": "15d64c42-5b64-4a75-b617-fe3e162bcadd",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "1996.927,-403.1028,-12.76899",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2219,17 +2459,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "1c01e3c1-13df-4f6f-b772-8184b7dea1de",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2245,11 +2488,13 @@
             },
             {
               "__guid": "2f9a2d97-74a3-4352-9df3-c85e0611d42f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2267,9 +2512,11 @@
         },
         {
           "__guid": "f0d57457-52eb-443f-9cb0-997f247f4446",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2344.979,467.2597,-12.76899",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2278,17 +2525,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "5630a594-dc8e-4ae1-ada7-5807769f332b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2304,11 +2554,13 @@
             },
             {
               "__guid": "c311edcf-844f-484a-b226-31cd4b4465bb",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2326,10 +2578,12 @@
         },
         {
           "__guid": "0d1dba8e-919b-4813-9841-26c39f5877ed",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2176.036,-403.1028,-12.76899",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2338,17 +2592,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "916593ce-a054-44b6-9ddb-6a50fa591c7a",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2364,11 +2621,13 @@
             },
             {
               "__guid": "79cc6cc7-32b9-4491-ace9-b8fde0cc0060",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2386,9 +2645,11 @@
         },
         {
           "__guid": "127d3b7c-5a3e-43a3-953c-b536ef3fa21d",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2681.54,-418.5978,-12.76832",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2397,17 +2658,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "ebf4aced-a399-4a35-bda6-7e1fc9426ab3",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2423,11 +2687,13 @@
             },
             {
               "__guid": "0bbf93ef-804e-457d-8333-9d76624a8cac",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2445,10 +2711,12 @@
         },
         {
           "__guid": "045b20a1-5a54-4027-bb58-0b265d87dffd",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2512.595,482.7533,-12.76832",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2457,17 +2725,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "06749a08-415f-4296-9efa-48fe501132d9",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2483,11 +2754,13 @@
             },
             {
               "__guid": "7bb75a06-48b6-4208-933a-6c09d69a3315",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2505,9 +2778,11 @@
         },
         {
           "__guid": "4fd8f593-46e6-402d-8bb1-9834ac8886cb",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2860.649,-418.5974,-12.76832",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2516,17 +2791,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "41c00d37-84be-4c8b-a075-99a0ee945839",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2542,11 +2820,13 @@
             },
             {
               "__guid": "6c179dc9-adb1-4c7e-8823-2ebec0bb9c89",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2564,10 +2844,12 @@
         },
         {
           "__guid": "c573a7f0-274f-4100-a2a2-c60ca72c5b79",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2691.705,482.7534,-12.76832",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2576,17 +2858,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "625c283b-2416-4ba9-b92e-0e3119a89725",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2602,11 +2887,13 @@
             },
             {
               "__guid": "a576ec3d-188e-4fbd-b734-7c996d74c257",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2624,9 +2911,11 @@
         },
         {
           "__guid": "88bdf650-77f8-4f58-8004-beed02ec3669",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2958.112,-84.51938,-12.76885",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2635,17 +2924,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "156213c6-1c8c-454e-bf1b-12fde808f335",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2661,11 +2953,13 @@
             },
             {
               "__guid": "d8c48a4b-590c-4f3d-9077-4c16e693e2a8",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2683,10 +2977,12 @@
         },
         {
           "__guid": "4b4bc752-8280-490d-bd74-a3d198409c8b",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2789.167,148.6757,-12.76885",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2695,17 +2991,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "1719fff9-4c69-463b-a4fb-0164b242cb50",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2721,11 +3020,13 @@
             },
             {
               "__guid": "f2821777-6739-45c5-9129-840f813e2f85",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2743,9 +3044,11 @@
         },
         {
           "__guid": "6ac0039e-5b69-4faf-b98b-f5fa036b32fc",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-3137.22,-84.51929,-12.76885",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2754,17 +3057,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "83f0d12e-65e9-4ebf-a00e-ccbe9544fe63",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2780,11 +3086,13 @@
             },
             {
               "__guid": "4173f4aa-e682-4d46-9815-661b58bfa81e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2802,10 +3110,12 @@
         },
         {
           "__guid": "69b11910-a217-4344-8b20-81acddbcb971",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2968.276,148.6758,-12.76885",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2814,17 +3124,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "2bc71416-379f-4def-9e31-e6faa0bb90ae",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2840,11 +3153,13 @@
             },
             {
               "__guid": "6daca171-d210-4045-ae6c-bc74dc0b113f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2862,9 +3177,11 @@
         },
         {
           "__guid": "7b37d882-f4f1-467d-b69e-b214d67d820c",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2033.795,193.9794,-12.76927",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2873,17 +3190,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "fbfbd8a0-a2d1-44fc-8e77-01c20075476d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2899,11 +3219,13 @@
             },
             {
               "__guid": "8c1fdda2-9674-4fd7-bf5c-7543bd006bb8",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2921,10 +3243,12 @@
         },
         {
           "__guid": "50fb2363-666f-4b03-9792-24985d3e9636",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "1864.852,-129.8231,-12.76927",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2933,17 +3257,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "6022e4b0-38f3-4be2-9ddd-84dfa7ec8436",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2959,11 +3286,13 @@
             },
             {
               "__guid": "5552ae17-9171-415a-bd3a-f3fceb62868d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2981,9 +3310,11 @@
         },
         {
           "__guid": "9c2c4ee9-1e4f-4860-8e6e-aad661024b89",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2212.906,193.9794,-12.76927",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -2992,17 +3323,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "71b031e0-b2de-4a94-9dd6-748aafa7be17",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3018,11 +3352,13 @@
             },
             {
               "__guid": "47bb3334-6b58-48c6-8267-386025896736",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3040,10 +3376,12 @@
         },
         {
           "__guid": "de9df2b9-acb7-4725-b95d-2d86bfa7ceaa",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "2043.962,-129.8233,-12.76927",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -3052,17 +3390,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "56f8ef56-2caa-4ba5-a560-8fc5d60ee2db",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3078,11 +3419,13 @@
             },
             {
               "__guid": "07772e4f-c15c-4953-a880-e7d2313fa3ff",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3100,9 +3443,11 @@
         },
         {
           "__guid": "8283c99d-f191-45ca-a336-f21e3ff9f196",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-1979.29,-374.168,-12.76931",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -3111,17 +3456,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "513807d5-f679-4443-9df4-1931e456e239",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3137,11 +3485,13 @@
             },
             {
               "__guid": "c12e50d5-2c64-43cc-bdbe-7fef1bd0237b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3159,10 +3509,12 @@
         },
         {
           "__guid": "58e7b5eb-bfd8-4656-93c8-3833926e8958",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "1810.347,438.3233,-12.76931",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -3171,17 +3523,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "5452401d-e02a-4379-8ff9-e85204e23a2f",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3197,11 +3552,13 @@
             },
             {
               "__guid": "466095ab-2596-45f4-b519-2abfc4e43080",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3219,9 +3576,11 @@
         },
         {
           "__guid": "9812fc30-0e5d-4331-a56a-4b8e9a8d08f2",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "-2158.399,-374.1676,-12.76931",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -3230,17 +3589,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "ebf6d0ac-d4d4-40f6-8c4c-530e0162be89",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3256,11 +3618,13 @@
             },
             {
               "__guid": "ddc9cc8b-fff4-4e24-b7c8-8cd7e4d07a9c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3278,10 +3642,12 @@
         },
         {
           "__guid": "7bf4c58d-4164-47e8-bd98-d113c16d8f4f",
+          "Flags": 0,
           "Name": "Ghost",
           "Position": "1989.457,438.3233,-12.76931",
           "Rotation": "0,0,-0.9999999,0.0000001490116",
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
@@ -3290,17 +3656,20 @@
               "CreateBoneObjects": false,
               "Model": "models/citizen/citizen.vmdl",
               "RenderType": "On",
-              "Tint": "0.05959,0.16279,0.03104,1"
+              "Tint": "0.05959,0.16279,0.03104,1",
+              "UseAnimGraph": true
             }
           ],
           "Children": [
             {
               "__guid": "084af703-101d-4744-bbc9-34e651e70c48",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.72363,3.996034,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3316,11 +3685,13 @@
             },
             {
               "__guid": "cd63e5eb-1a91-4bc3-86ae-34e1ea0e0ab3",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "8.723628,-3.339598,63.09814",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3340,10 +3711,12 @@
     },
     {
       "__guid": "f34330ce-55e6-44fa-b415-18428c30c917",
+      "Flags": 0,
       "Name": "Text",
       "Position": "383.9041,-19.20255,66.36413",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.TextRenderer",
@@ -3351,17 +3724,19 @@
           "Color": "0.20784,0.65882,0.76078,1",
           "FontFamily": "Poppins",
           "FontSize": 64,
+          "FontWeight": 800,
           "Scale": 0.3,
-          "Text": "I feel like I\u0027m trapped"
+          "Text": "I feel like I\u0027m trapped",
+          "TextAlignment": "Center"
         }
       ]
     }
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -3380,8 +3755,8 @@
   },
   "Title": "road",
   "Description": "",
-  "LastSaved": "2024-04-12T12:42:43.8438514-04:00",
+  "LastSaved": "2024-06-25T19:36:00.3656499-04:00",
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }

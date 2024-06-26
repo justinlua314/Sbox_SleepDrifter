@@ -3,12 +3,14 @@
   "GameObjects": [
     {
       "__guid": "d5d890fb-13dc-485d-a6ba-ee5e5b576f82",
+      "Flags": 0,
       "Name": "Player",
       "Position": "128.9645,87.60154,0",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.SkinnedModelRenderer",
@@ -17,7 +19,8 @@
           "CreateBoneObjects": false,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         },
         {
           "__type": "Sandbox.CharacterController",
@@ -28,7 +31,8 @@
           "Height": 64,
           "IgnoreLayers": "",
           "Radius": 16,
-          "StepHeight": 18
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -65,12 +69,14 @@
       "Children": [
         {
           "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+          "Flags": 0,
           "Name": "Camera",
           "Position": "3.525095,0.7382785,62.08046",
           "Rotation": "0.00000004301596,-0.00000000000001065814,0.0000002682209,-1",
           "Tags": "player_camera",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -121,9 +127,13 @@
             {
               "__type": "Sandbox.Tonemapping",
               "__guid": "9e8a78d4-52ed-4fee-bf9d-ffb3b8d3a613",
+              "__version": 1,
+              "ExposureBias": 2,
               "ExposureCompensation": 0,
+              "ExposureMethod": "RGB",
               "MaximumExposure": 2,
               "MinimumExposure": 1,
+              "Mode": "Legacy",
               "Rate": 1
             },
             {
@@ -188,10 +198,12 @@
         },
         {
           "__guid": "9ee2b9ee-d5c8-4d42-a9a2-164f2c7013e7",
+          "Flags": 0,
           "Name": "Hud",
           "Position": "0.2744522,0.0001221194,0",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ScreenPanel",
@@ -211,10 +223,11 @@
     },
     {
       "__guid": "6897f533-ad00-4265-81a1-7f6d878c38c9",
-      "Name": "Testmap",
-      "Position": "15.5918,147.322,-51.72641",
+      "Flags": 0,
+      "Name": "Hammer Map",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.MapInstance",
@@ -227,24 +240,30 @@
     },
     {
       "__guid": "af06a3bc-5d7c-4b4e-9741-1f21011d6441",
+      "Flags": 0,
       "Name": "Tunnel",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "741f84e2-82a2-4c72-a402-346d28e9bff9",
+          "Flags": 0,
           "Name": "Text",
           "Position": "296.4554,-15.66602,171.4444",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "a23e72a8-9e1a-4269-a448-6b178c08e9f2",
+              "Flags": 0,
               "Name": "BrickRoom",
               "Position": "-167.8905,250.334,-58.74098",
               "Rotation": "0,0,0.7071067,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -252,18 +271,22 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 48,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "I wonder where it all leads"
+                  "Text": "I wonder where it all leads",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "38e81ed3-85c0-48b9-add7-ecea71293039",
+              "Flags": 0,
               "Name": "Roman",
               "Position": "372.9358,23.47227,-52.19019",
               "Rotation": "0,0,-0.7071067,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -271,18 +294,22 @@
                   "Color": "0.20805,0.65729,0.75814,1",
                   "FontFamily": "Poppins",
                   "FontSize": 48,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "What a peculiar\nvehicle"
+                  "Text": "What a peculiar\nvehicle",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "7a4a5ce7-bd2d-4912-ae00-57630494af83",
+              "Flags": 0,
               "Name": "Birds",
               "Position": "2001.635,234.9033,-127.7527",
               "Rotation": "0,0,-0.7071067,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -290,8 +317,10 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 128,
+                  "FontWeight": 800,
                   "Scale": 0.1,
-                  "Text": "Confiscate\nThe Capitain"
+                  "Text": "Confiscate\nThe Capitain",
+                  "TextAlignment": "Center"
                 }
               ]
             }
@@ -299,24 +328,30 @@
         },
         {
           "__guid": "ce1206dc-d2be-406d-b221-4b090faa6529",
+          "Flags": 0,
           "Name": "Props",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "10b182e9-75f5-42a2-8c70-b5386ac61c3b",
+              "Flags": 0,
               "Name": "Outside",
               "Position": "1700.241,1684.609,-333.2602",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "3b9d2a9a-c79b-4bd5-825c-5c1cb5a6e6a2",
+                  "Flags": 0,
                   "Name": "Couch",
                   "Position": "350.9229,344.5591,54.76373",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -337,12 +372,14 @@
                 },
                 {
                   "__guid": "ed1237b6-c08b-4884-ab51-44084d8f63d2",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "448.2185,79.80444,99.76843",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -363,12 +400,14 @@
                 },
                 {
                   "__guid": "f78e1f98-53f6-474f-a5f1-9014a527cc18",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "341.5479,173.0515,65.88235",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -389,12 +428,14 @@
                 },
                 {
                   "__guid": "6b0a5fdc-e083-4a23-9c03-10934a0aa03b",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "252.3646,119.4155,42.79578",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -415,12 +456,14 @@
                 },
                 {
                   "__guid": "d6fab6af-4d2f-425d-8343-5c851b6655cf",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "194.3372,247.0754,21.39435",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -441,12 +484,14 @@
                 },
                 {
                   "__guid": "d0ee6bb7-608b-42a0-b9a8-9dc15acfbcee",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "97.59619,247.0754,-4.707886",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -467,12 +512,14 @@
                 },
                 {
                   "__guid": "d889d670-8840-4dd0-8344-860e1cd7cafa",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "97.59619,104.3121,-6.294098",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -493,12 +540,14 @@
                 },
                 {
                   "__guid": "bfc7d39f-8716-4765-99b3-740a074ec20f",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "175.2072,372.8041,18.00943",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -519,12 +568,14 @@
                 },
                 {
                   "__guid": "0428c901-0a35-4a95-9a59-bbf7f8efdcba",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "175.2072,480.5299,18.00943",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -545,12 +596,14 @@
                 },
                 {
                   "__guid": "bb071384-9db5-4650-8e81-5d2537b6431d",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "75.1842,521.1537,-16.21191",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -571,12 +624,14 @@
                 },
                 {
                   "__guid": "301e2583-feb1-4a32-b54e-19ddbb627205",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "260.2286,558.8429,46.8866",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -597,12 +652,14 @@
                 },
                 {
                   "__guid": "93b968fa-e313-4adf-9c00-6e1806044fa9",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "351.7275,492.4286,67.5238",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -623,12 +680,14 @@
                 },
                 {
                   "__guid": "19870b6a-c31c-47da-ab94-3c7ac28b5d11",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "455.7634,569.483,95.21509",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -649,12 +708,14 @@
                 },
                 {
                   "__guid": "843a3e21-4bdd-4f95-98df-56d725fc422d",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "510.0625,472.527,109.7645",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -675,12 +736,14 @@
                 },
                 {
                   "__guid": "84c39c87-3e31-4fc0-8321-fb6705311b42",
+                  "Flags": 0,
                   "Name": "Tree",
                   "Position": "510.0625,220.0013,109.7645",
                   "Rotation": "0,-0.1305262,0,0.9914449",
                   "Scale": "0.1459508,0.1459508,0.1459508",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -703,17 +766,21 @@
             },
             {
               "__guid": "0243ddd7-4694-414e-9f63-2cbb00118108",
+              "Flags": 0,
               "Name": "Roman",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "e5145782-7dfa-4a83-9d39-e56262208dcf",
+                  "Flags": 0,
                   "Name": "Chair",
                   "Position": "800.0006,99.26095,78.23738",
                   "Rotation": "0,-0.7071067,0,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -734,24 +801,30 @@
                 },
                 {
                   "__guid": "3e9e0e97-7ce9-4083-8526-f30c73c77f75",
+                  "Flags": 0,
                   "Name": "Hanging Clock",
                   "Position": "566.217,7.807517,11.97",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Children": [
                     {
                       "__guid": "612738ca-ff32-4110-bd02-569b8f4b8e01",
+                      "Flags": 0,
                       "Name": "Ballast",
                       "Position": "61,135,151",
                       "Enabled": true,
-                      "NetworkMode": 2
+                      "NetworkMode": 2,
+                      "NetworkInterpolation": true
                     },
                     {
                       "__guid": "09f4a482-22c6-4f72-80b1-92b0aebe480c",
+                      "Flags": 0,
                       "Name": "Clock",
                       "Position": "61,135,68",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -814,10 +887,12 @@
                 },
                 {
                   "__guid": "95fc6421-5967-440b-a985-9e9cc21c3423",
+                  "Flags": 0,
                   "Name": "R_Car",
                   "Position": "774,189,4.000302",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "PathMovement",
@@ -872,13 +947,16 @@
                   "Children": [
                     {
                       "__guid": "b4d71107-a8a9-4623-86c0-65c680790637",
+                      "Flags": 0,
                       "Name": "Prefab",
                       "Position": "-4.231567,-1.987061,-3.526449",
                       "Rotation": "0,0,1,-0.00000004371139",
                       "Scale": "0.5,0.5,0.5",
                       "Enabled": true,
                       "NetworkMode": 2,
-                      "__Prefab": "prefabs/r_car.prefab"
+                      "NetworkInterpolation": true,
+                      "__Prefab": "prefabs/r_car.prefab",
+                      "__PrefabVariables": {}
                     }
                   ]
                 }
@@ -886,18 +964,22 @@
             },
             {
               "__guid": "7ffe4222-bbe0-4d0d-9f85-3a005e34c304",
+              "Flags": 0,
               "Name": "Roman-Fake",
               "Position": "820,0,0",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "d16de8b6-8fc1-4921-9d84-4feb750c6a05",
+                  "Flags": 0,
                   "Name": "Chair",
                   "Position": "800.0006,99.26095,78.23738",
                   "Rotation": "0,-0.7071067,0,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -918,24 +1000,30 @@
                 },
                 {
                   "__guid": "7ff17cd5-870f-408e-a0b9-1a5884fe6f8d",
+                  "Flags": 0,
                   "Name": "Hanging Clock",
                   "Position": "566.217,7.807517,11.97",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Children": [
                     {
                       "__guid": "5e85a949-bab3-444f-838c-95549e30de31",
+                      "Flags": 0,
                       "Name": "Ballast",
                       "Position": "61,135,151",
                       "Enabled": true,
-                      "NetworkMode": 2
+                      "NetworkMode": 2,
+                      "NetworkInterpolation": true
                     },
                     {
                       "__guid": "9c0b850c-e667-4760-b1d3-8f3694e846d8",
+                      "Flags": 0,
                       "Name": "Clock",
                       "Position": "61,135,68",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1000,16 +1088,20 @@
             },
             {
               "__guid": "faa82c3c-8ef4-4a5c-9a51-93bbe735a0f1",
+              "Flags": 0,
               "Name": "Faces",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "afb6034a-5c93-4ae0-b411-8026e935c84d",
+                  "Flags": 0,
                   "Name": "Face",
                   "Position": "947.1789,158.5458,0",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "FaceLogic",
@@ -1026,11 +1118,13 @@
                   "Children": [
                     {
                       "__guid": "14c44e32-4ab5-4aba-9c0b-a45148d3e223",
+                      "Flags": 0,
                       "Name": "Mouth",
                       "Position": "-2.059875,-5.312927,47.68806",
                       "Scale": "2,2,2",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1071,12 +1165,14 @@
                     },
                     {
                       "__guid": "a38f57f9-7fc7-4c5b-9c37-695d52c642df",
+                      "Flags": 0,
                       "Name": "Eye",
                       "Position": "35.3877,-5.312927,118.7008",
                       "Rotation": "0,0,1,-0.00000004371139",
                       "Scale": "1.409249,1.409249,1.409249",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1110,11 +1206,13 @@
                     },
                     {
                       "__guid": "d36bb0ba-c6a5-4113-8cdc-4e97df47b8e3",
+                      "Flags": 0,
                       "Name": "Eye",
                       "Position": "-34.73218,16.79597,118.7008",
                       "Scale": "1.409249,1.409249,1.409249",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1150,11 +1248,13 @@
                 },
                 {
                   "__guid": "971acd10-8efc-409e-89b8-c4333935ecae",
+                  "Flags": 0,
                   "Name": "Goal",
                   "Position": "948.738,12.47753,18.14725",
                   "Rotation": "0.8660253,0,0,0.5000001",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -1203,17 +1303,21 @@
             },
             {
               "__guid": "43a0e606-a70b-418d-9236-f4b8e349c037",
+              "Flags": 0,
               "Name": "Faces",
               "Position": "820,0,0",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "c3b6bd85-b87a-462e-bda7-9f0bd653e53c",
+                  "Flags": 0,
                   "Name": "Face",
                   "Position": "947.1789,158.5458,0",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "FaceLogic",
@@ -1230,11 +1334,13 @@
                   "Children": [
                     {
                       "__guid": "069749b2-b6be-4918-951e-201d181f0e5d",
+                      "Flags": 0,
                       "Name": "Mouth",
                       "Position": "-2.059875,-5.312927,47.68806",
                       "Scale": "2,2,2",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1275,12 +1381,14 @@
                     },
                     {
                       "__guid": "e655f08a-34c1-4bb7-9139-a2221b3b0475",
+                      "Flags": 0,
                       "Name": "Eye",
                       "Position": "35.3877,-5.312927,118.7008",
                       "Rotation": "0,0,1,-0.00000004371139",
                       "Scale": "1.409249,1.409249,1.409249",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1314,11 +1422,13 @@
                     },
                     {
                       "__guid": "3ad877c2-4642-46c9-a2cd-824d365f7198",
+                      "Flags": 0,
                       "Name": "Eye",
                       "Position": "-34.73218,16.79597,118.7008",
                       "Scale": "1.409249,1.409249,1.409249",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1356,23 +1466,29 @@
             },
             {
               "__guid": "3d13701f-60d3-477a-ac05-f18f2ddd8dba",
+              "Flags": 0,
               "Name": "Birds",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "f86ded67-a049-4663-a036-36b0af58ebc3",
+                  "Flags": 0,
                   "Name": "Flock",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Children": [
                     {
                       "__guid": "562523b0-db35-4598-b735-3f62634686e5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2257.787,77.06528,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1386,11 +1502,13 @@
                     },
                     {
                       "__guid": "e5397208-95c9-4a5c-81de-f2d46396a99f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2251.198,89.63788,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1404,11 +1522,13 @@
                     },
                     {
                       "__guid": "e0132e14-0771-442e-983c-7d5329b5cfe4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2243.931,101.9221,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1422,11 +1542,13 @@
                     },
                     {
                       "__guid": "41efb5bf-e557-46c5-98d4-b7f65b9443fb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2234.018,119.447,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1440,11 +1562,13 @@
                     },
                     {
                       "__guid": "b84cd30b-52d2-422e-80d0-68b8750b34bb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2222.245,140.0792,37.13361",
                       "Rotation": "0,0,0.9238797,0.3826835",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1458,11 +1582,13 @@
                     },
                     {
                       "__guid": "182ef7fb-e96c-467b-9a56-175924bdd903",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,246.9354,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1476,11 +1602,13 @@
                     },
                     {
                       "__guid": "e580b07a-0bda-4932-b850-16ef2987cd5a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,232.5856,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1494,11 +1622,13 @@
                     },
                     {
                       "__guid": "bd688f40-1cbf-4d3d-908d-86bb480e4d41",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,217.1429,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1512,11 +1642,13 @@
                     },
                     {
                       "__guid": "9301f828-b6db-4390-8692-9c7832285b31",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,199.1129,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1530,11 +1662,13 @@
                     },
                     {
                       "__guid": "2ff5aa2f-3445-48c7-8e65-d2e1c60135d5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,181.5125,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1548,11 +1682,13 @@
                     },
                     {
                       "__guid": "2da7b682-f11f-4cd9-ab82-009f7931f323",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.493,189.3241,7.264153",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1566,11 +1702,13 @@
                     },
                     {
                       "__guid": "12bd8e6a-59a2-42a9-8115-ce0eb92bc7d8",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.493,189.3241,24.26231",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1584,11 +1722,13 @@
                     },
                     {
                       "__guid": "11903bf0-e19e-4b30-a4fb-2fca1fe24253",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.492,189.3241,41.35186",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1602,11 +1742,13 @@
                     },
                     {
                       "__guid": "9cb799c3-422d-4f5d-8bfe-aa7e556598b6",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.492,189.324,62.88132",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1620,11 +1762,13 @@
                     },
                     {
                       "__guid": "a1070f86-75a4-4164-b32f-89f5bd9a37bc",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.491,189.324,81.70172",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1638,11 +1782,13 @@
                     },
                     {
                       "__guid": "c65c3b2d-408c-4ea3-a6ed-92f042b19b63",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.491,189.3239,99.92119",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1656,11 +1802,13 @@
                     },
                     {
                       "__guid": "ab27dac2-b6cf-4f41-bbfb-8f60eee0ac5f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.49,189.3239,118.2539",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1674,11 +1822,13 @@
                     },
                     {
                       "__guid": "e48e6b91-15f3-4ce4-a9eb-d5a843fde9c0",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.49,189.3238,141.8885",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1692,11 +1842,13 @@
                     },
                     {
                       "__guid": "0b6fa37c-6dab-4416-b107-5b1810b8a11a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,160.8766,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1710,11 +1862,13 @@
                     },
                     {
                       "__guid": "15273f6f-0a14-4fda-aacf-aa64c4be3c8f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2423.771,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1728,11 +1882,13 @@
                     },
                     {
                       "__guid": "b021acd8-2577-453c-9650-2f63a4683741",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2411.394,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1746,11 +1902,13 @@
                     },
                     {
                       "__guid": "c9ba4cdd-a289-4875-bf41-73b23e9f9f2b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2394.07,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1764,11 +1922,13 @@
                     },
                     {
                       "__guid": "547dce2b-9b57-4404-8b91-0eb79bfdde6f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2378.922,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1782,11 +1942,13 @@
                     },
                     {
                       "__guid": "0fa0353e-d105-4d8b-8abf-71e8c8c2964c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.093,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1800,11 +1962,13 @@
                     },
                     {
                       "__guid": "d96db76e-7830-4fef-990f-b2dac513d87e",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2344.767,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1818,11 +1982,13 @@
                     },
                     {
                       "__guid": "d0991438-0690-4bd0-90f1-7ac50874ec87",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2327.395,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1836,11 +2002,13 @@
                     },
                     {
                       "__guid": "82755373-6639-4a3c-828e-f462e7e389c7",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2310.751,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1854,12 +2022,14 @@
                     },
                     {
                       "__guid": "15852681-5468-4050-a767-dcf37e095874",
+                      "Flags": 0,
                       "Name": "Goal",
                       "Position": "2306.187,24.95026,9.641499",
                       "Rotation": "0,0,1,0.00000005960464",
                       "Scale": "3,3,3",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1906,11 +2076,13 @@
                     },
                     {
                       "__guid": "99dee10f-08f2-4d9a-94a3-1eec5a537e06",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2294.052,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1924,11 +2096,13 @@
                     },
                     {
                       "__guid": "62cbb320-9aaf-48ab-9186-1b2ae359f1dd",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2280.811,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1942,11 +2116,13 @@
                     },
                     {
                       "__guid": "30c0437c-1707-463c-8704-c36f80de8089",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2266.409,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1960,11 +2136,13 @@
                     },
                     {
                       "__guid": "bc31156d-417d-47a1-83a9-abf5f9b8722a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2250.477,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1978,11 +2156,13 @@
                     },
                     {
                       "__guid": "b6780ead-be0b-489b-8e8b-0706a37da7ca",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2255.288,155.0442,106.4384",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -1996,11 +2176,13 @@
                     },
                     {
                       "__guid": "9f2738db-2f25-43f7-8bd0-416d1a50664a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2242.813,150.8276,115.6301",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2014,11 +2196,13 @@
                     },
                     {
                       "__guid": "e039da18-fb5b-4045-934a-312141c6e54b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2260.648,139.3502,103.6042",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2032,11 +2216,13 @@
                     },
                     {
                       "__guid": "e15c80fc-c52d-470f-9b76-022b2bd9eca5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2274.668,130.105,94.37732",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2050,11 +2236,13 @@
                     },
                     {
                       "__guid": "dac1bdf4-1586-4edf-a016-5ba45c4378cf",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2289.966,119.686,84.77185",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2068,11 +2256,13 @@
                     },
                     {
                       "__guid": "b680f162-ae3f-478f-9bbb-cbe2da435e28",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2304.457,109.8195,75.75183",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2086,11 +2276,13 @@
                     },
                     {
                       "__guid": "227dc1bb-9a6a-4842-a7a5-6baae8edc2db",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2317.341,101.4599,67.72766",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2104,11 +2296,13 @@
                     },
                     {
                       "__guid": "c3aa779a-ae22-44c4-a8eb-30da0ff1faea",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2331.258,92.49106,58.77234",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2122,11 +2316,13 @@
                     },
                     {
                       "__guid": "580734f9-b2c4-4f43-9260-d63e12931a95",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2345.403,82.04745,50.02527",
                       "Rotation": "0.2722355,0.1256892,0.9197389,0.25332",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2140,11 +2336,13 @@
                     },
                     {
                       "__guid": "0949439c-8a57-4675-b0b8-a6bd4ad059e4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2357.102,75.1994,42.62305",
                       "Rotation": "0.2722355,0.1256892,0.9197389,0.25332",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2158,11 +2356,13 @@
                     },
                     {
                       "__guid": "2f9705fb-96d1-4284-a6bb-376406d4322f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2370.193,65.33289,34.26099",
                       "Rotation": "0.2863122,0.08908005,0.9449353,0.1311028",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2176,11 +2376,13 @@
                     },
                     {
                       "__guid": "f506887c-1654-4516-8548-f64300e46042",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2382.382,58.06867,26.69861",
                       "Rotation": "0.2863122,0.08908005,0.9449353,0.1311028",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2194,11 +2396,13 @@
                     },
                     {
                       "__guid": "7824c554-1002-451a-8d65-65f81e40a606",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2397.967,48.24437,17.09094",
                       "Rotation": "0.299612,0.01194167,0.9466693,-0.1179316",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2212,11 +2416,13 @@
                     },
                     {
                       "__guid": "818a6986-723c-4c3b-817f-6ae387507c67",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2223.51,163.597,127.0046",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2230,11 +2436,13 @@
                     },
                     {
                       "__guid": "71e9dc65-973c-4103-b484-677eea74087c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.556,176.3241,137.1256",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2248,11 +2456,13 @@
                     },
                     {
                       "__guid": "84d04bd6-d045-4040-a96e-7958ebeb54c0",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2188.628,185.975,149.0873",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2266,11 +2476,13 @@
                     },
                     {
                       "__guid": "29df70e7-760a-4be1-a4ec-7e448b34e44a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2271.719,145.6618,110.2121",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2284,11 +2496,13 @@
                     },
                     {
                       "__guid": "ef5e277c-7b3b-423a-a774-2e98bd30463b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2288.633,135.6402,114.133",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2302,11 +2516,13 @@
                     },
                     {
                       "__guid": "2c3debe0-1085-4936-94e0-3483be362511",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2306.217,124.4876,118.2823",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2320,11 +2536,13 @@
                     },
                     {
                       "__guid": "bf2b8665-f1d2-4156-a9bf-0c3100a636b5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2321.106,116.7007,121.6303",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2338,11 +2556,13 @@
                     },
                     {
                       "__guid": "b23498e0-fd2c-4782-bb86-e995e117918c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2335.446,109.2854,124.8468",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2356,11 +2576,13 @@
                     },
                     {
                       "__guid": "e78bfc91-838d-4557-af94-a70d112854a4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2348.468,101.4597,127.8764",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2374,11 +2596,13 @@
                     },
                     {
                       "__guid": "9c8c9db5-b8d7-48a6-8bf6-de4c0ddb88e9",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2361.605,92.50995,131.0379",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2392,11 +2616,13 @@
                     },
                     {
                       "__guid": "bd7e6ccd-f508-4929-bec6-9e050a9fc4e3",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2375.833,85.38,134.2065",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2410,11 +2636,13 @@
                     },
                     {
                       "__guid": "ea9b4287-d632-4a96-9c00-cfd72c524265",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2388.742,76.84234,137.2876",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2428,11 +2656,13 @@
                     },
                     {
                       "__guid": "b6e3b645-78d4-40ef-b704-89e2da357d85",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2403.898,68.09203,140.778",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2446,11 +2676,13 @@
                     },
                     {
                       "__guid": "82f1e7ac-1acd-426b-803f-ad50f47014be",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2420.819,58.32291,144.6748",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2464,11 +2696,13 @@
                     },
                     {
                       "__guid": "b1db94f7-d237-4c22-8b5a-c32fc1fd8d72",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2236.256,164.88,102.1702",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2482,11 +2716,13 @@
                     },
                     {
                       "__guid": "86d60c67-7c1d-449e-8683-aeeeb10d2378",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2217.396,175.7693,97.82654",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2500,11 +2736,13 @@
                     },
                     {
                       "__guid": "2384115b-0c27-4e66-af4b-877ad54aacbc",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.554,188.3795,92.79636",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2518,11 +2756,13 @@
                     },
                     {
                       "__guid": "27ef883a-2ed2-408d-8f4a-88f7fe7357c6",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2233.192,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2536,11 +2776,13 @@
                     },
                     {
                       "__guid": "19316a1c-34bb-4aac-af48-fbd905246dbb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,170.837,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2554,11 +2796,13 @@
                     },
                     {
                       "__guid": "584b1876-aa46-4c55-9007-980b2131ef8d",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,148.2036,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2572,11 +2816,13 @@
                     },
                     {
                       "__guid": "faebac35-682b-4a69-a507-adacc9bcc164",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,126.9445,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2590,11 +2836,13 @@
                     },
                     {
                       "__guid": "6d35e19f-c2a1-4e93-85c1-ac43beac3f03",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,107.1009,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2608,11 +2856,13 @@
                     },
                     {
                       "__guid": "d8c3d1da-49cf-487f-859a-a7fc538a4876",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,82.36852,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2626,11 +2876,13 @@
                     },
                     {
                       "__guid": "7e0c6d82-beb0-49ef-aa4c-a6603eaa6f2f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,58.41703,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2644,11 +2896,13 @@
                     },
                     {
                       "__guid": "7abb4818-7a5e-42f4-9438-90bef0297c7f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,38.51086,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2662,11 +2916,13 @@
                     },
                     {
                       "__guid": "4e52bd63-e98f-4a56-96e9-0c6b444b96bb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,18.97767,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2680,11 +2936,13 @@
                     },
                     {
                       "__guid": "19424573-a94d-4fff-93e4-c7f164636223",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,186.6183,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2698,11 +2956,13 @@
                     },
                     {
                       "__guid": "5a63e701-a826-4900-9dfe-3e1367223e87",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,207.2403,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2716,11 +2976,13 @@
                     },
                     {
                       "__guid": "6d057a47-df00-4e58-9303-06255c386d3c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,227.7847,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2734,11 +2996,13 @@
                     },
                     {
                       "__guid": "f54d3b49-f1fb-434f-ab08-1f0f01b853fe",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2212.537,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2752,11 +3016,13 @@
                     },
                     {
                       "__guid": "bd33f885-5032-4d45-8611-db1262cd4f80",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.878,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2770,11 +3036,13 @@
                     },
                     {
                       "__guid": "d43375d6-04a7-4867-8d2f-bec07e0c7cca",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,139.6724,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2788,11 +3056,13 @@
                     },
                     {
                       "__guid": "317bd525-9776-4fc4-8f1b-0d9de1534abf",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,121.6463,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2806,11 +3076,13 @@
                     },
                     {
                       "__guid": "b2c4b85b-9fcc-488e-a73f-94add1b85135",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,105.0377,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2824,11 +3096,13 @@
                     },
                     {
                       "__guid": "e0fe09d5-8180-4e82-bb50-cacef4ee6b4c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,87.6785,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2842,11 +3116,13 @@
                     },
                     {
                       "__guid": "0e3fd65d-10ff-4e78-b028-daa2a0df9542",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,71.78499,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2860,11 +3136,13 @@
                     },
                     {
                       "__guid": "9fe7c74e-066d-4235-9f54-c82486f72f27",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,55.31791,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2878,11 +3156,13 @@
                     },
                     {
                       "__guid": "fee50152-51df-41d5-83af-2f0d23c3fcef",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,37.40689,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2896,11 +3176,13 @@
                     },
                     {
                       "__guid": "64d1222a-0f97-48e9-b6be-0dfeaf2492ea",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,17.68564,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2914,11 +3196,13 @@
                     },
                     {
                       "__guid": "c58732bd-155d-4c97-8703-a30d40468916",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2209.357,163.356,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2932,11 +3216,13 @@
                     },
                     {
                       "__guid": "cd457427-4f06-4e51-84c5-688c62d317d5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2202.81,175.6751,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2950,11 +3236,13 @@
                     },
                     {
                       "__guid": "d36a1d66-3b98-49ed-9802-947da271145c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.012,189.7625,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2968,11 +3256,13 @@
                     },
                     {
                       "__guid": "6adb43b4-67e5-4fd4-b688-6ce5d45c9efa",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2265.125,63.99927,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -2986,11 +3276,13 @@
                     },
                     {
                       "__guid": "7580e1e0-0cc7-4c94-a72f-3f98525ea48b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2272.911,50.58575,37.58859",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3004,11 +3296,13 @@
                     },
                     {
                       "__guid": "f480a803-b276-4e82-8421-f8cb15a92b45",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2282.044,35.17963,37.5886",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3022,11 +3316,13 @@
                     },
                     {
                       "__guid": "62d420a1-07a3-4683-adf4-ec76ac4a76b3",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2293.225,16.78186,37.58862",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3042,12 +3338,14 @@
                 },
                 {
                   "__guid": "7ffcef5d-07d8-4e76-bdc4-47feb0e6467b",
+                  "Flags": 0,
                   "Name": "SignTrigger",
                   "Position": "2307.128,189.0012,72.36401",
                   "Rotation": "-0.7071067,0,0,0.7071068",
                   "Scale": "2.869194,2.305705,1.133396",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PlaneCollider",
@@ -3076,25 +3374,31 @@
             },
             {
               "__guid": "a3487ed3-1c41-4c4b-bdf8-4ca1ea66bd22",
+              "Flags": 0,
               "Name": "Birds-Fake",
               "Position": "820,0,0",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "1b707241-1ecb-46e9-a828-ce2b1ffb897e",
+                  "Flags": 0,
                   "Name": "Flock",
                   "Position": "0,0,0",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Children": [
                     {
                       "__guid": "469b4f4b-772f-4fb6-a9d5-156a203e240a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2257.787,77.06528,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3108,11 +3412,13 @@
                     },
                     {
                       "__guid": "52d5e3aa-303c-4e41-9b04-1ce276e928f2",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2251.198,89.63788,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3126,11 +3432,13 @@
                     },
                     {
                       "__guid": "e2430507-47b4-4e42-943a-ba501504bfa6",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2243.931,101.9221,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3144,11 +3452,13 @@
                     },
                     {
                       "__guid": "54d894d6-7580-455c-b10e-4cabbd622709",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2234.018,119.447,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3162,11 +3472,13 @@
                     },
                     {
                       "__guid": "8529615f-56b6-4240-993d-0296af48c6cb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2222.245,140.0792,37.13361",
                       "Rotation": "0,0,0.9238797,0.3826835",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3180,11 +3492,13 @@
                     },
                     {
                       "__guid": "65a2da34-8441-49c9-877f-33b55181b3ee",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,246.9354,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3198,11 +3512,13 @@
                     },
                     {
                       "__guid": "b7055cac-e1d3-4ea0-8cc1-1dc0268d7132",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,232.5856,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3216,11 +3532,13 @@
                     },
                     {
                       "__guid": "366db9ef-64fd-44df-8260-7619389b54cc",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,217.1429,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3234,11 +3552,13 @@
                     },
                     {
                       "__guid": "94549892-f800-4c10-996e-5b940371a741",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,199.1129,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3252,11 +3572,13 @@
                     },
                     {
                       "__guid": "c9a157be-53d0-4cf3-97bf-4b779d2f0938",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,181.5125,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3270,11 +3592,13 @@
                     },
                     {
                       "__guid": "3221e25d-5a96-441c-9b3b-45e2722647f7",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.493,189.3241,7.264153",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3288,11 +3612,13 @@
                     },
                     {
                       "__guid": "6cc6f99a-8700-477d-af63-42dee2fbcbcd",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.493,189.3241,24.26231",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3306,11 +3632,13 @@
                     },
                     {
                       "__guid": "eb965cea-1c4c-4254-b232-2859a07a5adb",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.492,189.3241,41.35186",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3324,11 +3652,13 @@
                     },
                     {
                       "__guid": "d23581b5-aada-4808-bd81-1030641f86cd",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.492,189.324,62.88132",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3342,11 +3672,13 @@
                     },
                     {
                       "__guid": "e59e0c9f-0fce-4d70-aa7b-022bcf1639aa",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.491,189.324,81.70172",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3360,11 +3692,13 @@
                     },
                     {
                       "__guid": "a29e4078-5751-42ee-ad59-4203ba43d515",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.491,189.3239,99.92119",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3378,11 +3712,13 @@
                     },
                     {
                       "__guid": "70182997-4cc0-4b8d-9382-7efe5e953392",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.49,189.3239,118.2539",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3396,11 +3732,13 @@
                     },
                     {
                       "__guid": "7500c6c1-1dad-474d-a424-4424b0957d12",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.49,189.3238,141.8885",
                       "Rotation": "-0.7071067,0.0000001490116,0.7071068,-0.00000005960464",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3414,11 +3752,13 @@
                     },
                     {
                       "__guid": "efd2ad48-dd34-45d7-9dd9-aebe41190c25",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,160.8766,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3432,11 +3772,13 @@
                     },
                     {
                       "__guid": "3e483294-f51c-445b-a7b1-60fdf60fbde1",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2423.771,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3450,11 +3792,13 @@
                     },
                     {
                       "__guid": "b1ee6a0c-9309-4eb8-8eff-83aa556e2c43",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2411.394,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3468,11 +3812,13 @@
                     },
                     {
                       "__guid": "1b7f1a6c-0a4f-4802-a9c3-b7d374d9e8b8",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2394.07,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3486,11 +3832,13 @@
                     },
                     {
                       "__guid": "e88502ce-4239-4cca-ba94-b2c07adefb87",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2378.922,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3504,11 +3852,13 @@
                     },
                     {
                       "__guid": "ea043670-2313-4952-b2d8-3916e545e52f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2362.093,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3522,11 +3872,13 @@
                     },
                     {
                       "__guid": "b88b4a8e-abde-4309-a7f8-02a270be4a9b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2344.767,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3540,11 +3892,13 @@
                     },
                     {
                       "__guid": "db6f2a15-a2b0-4de5-a797-d4cae6e4f4aa",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2327.395,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3558,11 +3912,13 @@
                     },
                     {
                       "__guid": "195e0443-8150-4c3d-ab27-909273d1c6c7",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2310.751,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3576,11 +3932,13 @@
                     },
                     {
                       "__guid": "bf37ba7d-04ab-40c0-a4fb-e2b09921e2b3",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2294.052,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3594,11 +3952,13 @@
                     },
                     {
                       "__guid": "8e020ab5-f4eb-4d94-853b-7c4ea85a5a8c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2280.811,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3612,11 +3972,13 @@
                     },
                     {
                       "__guid": "10a123d6-08bb-4225-9fb0-8ab9174d5a78",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2266.409,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3630,11 +3992,13 @@
                     },
                     {
                       "__guid": "f167884f-5954-46fd-b3d6-cdc672b5773e",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2250.477,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3648,11 +4012,13 @@
                     },
                     {
                       "__guid": "11a7062b-50b4-436b-bdb8-6ab9595af619",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2255.288,155.0442,106.4384",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3666,11 +4032,13 @@
                     },
                     {
                       "__guid": "0dd40518-179a-4d9e-bf39-d715e015d6e1",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2242.813,150.8276,115.6301",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3684,11 +4052,13 @@
                     },
                     {
                       "__guid": "85265cbd-8138-407e-9dba-21755bffb0a9",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2260.648,139.3502,103.6042",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3702,11 +4072,13 @@
                     },
                     {
                       "__guid": "afeafa0b-3bd3-4200-8310-c61a6bfee75e",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2274.668,130.105,94.37732",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3720,11 +4092,13 @@
                     },
                     {
                       "__guid": "82a41e6a-2b03-4523-9017-05798d27f765",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2289.966,119.686,84.77185",
                       "Rotation": "0.3212244,0.09763471,0.9222952,0.1914531",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3738,11 +4112,13 @@
                     },
                     {
                       "__guid": "117b858a-3f6f-4e6f-8ed6-6e47109f48e6",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2304.457,109.8195,75.75183",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3756,11 +4132,13 @@
                     },
                     {
                       "__guid": "d4c014ac-22e6-4400-95cd-12affdd08541",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2317.341,101.4599,67.72766",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3774,11 +4152,13 @@
                     },
                     {
                       "__guid": "71d7bf61-94e3-4a25-a3a3-2cfaeff7bb7a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2331.258,92.49106,58.77234",
                       "Rotation": "0.2805162,0.1059273,0.9354808,0.1869926",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3792,11 +4172,13 @@
                     },
                     {
                       "__guid": "f0e5e9bd-ad17-4879-abcc-e89443f661f4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2345.403,82.04745,50.02527",
                       "Rotation": "0.2722355,0.1256892,0.9197389,0.25332",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3810,11 +4192,13 @@
                     },
                     {
                       "__guid": "5494542e-9834-42e5-a03f-f6e197796a65",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2357.102,75.1994,42.62305",
                       "Rotation": "0.2722355,0.1256892,0.9197389,0.25332",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3828,11 +4212,13 @@
                     },
                     {
                       "__guid": "c461f26f-4c79-465d-8218-608c69ea6932",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2370.193,65.33289,34.26099",
                       "Rotation": "0.2863122,0.08908005,0.9449353,0.1311028",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3846,11 +4232,13 @@
                     },
                     {
                       "__guid": "f11f9f15-51c6-417f-922c-bd178d68880f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2382.382,58.06867,26.69861",
                       "Rotation": "0.2863122,0.08908005,0.9449353,0.1311028",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3864,11 +4252,13 @@
                     },
                     {
                       "__guid": "94629926-4c14-4b7e-b7d7-0b5db6214d9d",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2397.967,48.24437,17.09094",
                       "Rotation": "0.299612,0.01194167,0.9466693,-0.1179316",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3882,11 +4272,13 @@
                     },
                     {
                       "__guid": "6b8498a1-7c34-414b-9219-ea25c72dc692",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2223.51,163.597,127.0046",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3900,11 +4292,13 @@
                     },
                     {
                       "__guid": "3683baac-69d3-4f3d-a694-de478d398d67",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.556,176.3241,137.1256",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3918,11 +4312,13 @@
                     },
                     {
                       "__guid": "901093e5-4bf5-4c78-8aaa-bef7f479a086",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2188.628,185.975,149.0873",
                       "Rotation": "0.3097018,0.1239635,0.9251452,0.181176",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3936,11 +4332,13 @@
                     },
                     {
                       "__guid": "f7d87524-32c4-484a-84be-5d6c9967ecd5",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2271.719,145.6618,110.2121",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3954,11 +4352,13 @@
                     },
                     {
                       "__guid": "33c6fa26-73cb-4873-8d6b-6c5c4f1d4d2d",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2288.633,135.6402,114.133",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3972,11 +4372,13 @@
                     },
                     {
                       "__guid": "ff95d31b-e9e8-4857-9259-b9a3fbe99aa3",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2306.217,124.4876,118.2823",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -3990,11 +4392,13 @@
                     },
                     {
                       "__guid": "82cb079b-eeb0-4e6d-b772-23c6a1fa34f0",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2321.106,116.7007,121.6303",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4008,11 +4412,13 @@
                     },
                     {
                       "__guid": "a429a436-8268-4de9-a9e9-907c188dbd31",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2335.446,109.2854,124.8468",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4026,11 +4432,13 @@
                     },
                     {
                       "__guid": "78771fb8-a1b5-49d9-85fa-654fec434f02",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2348.468,101.4597,127.8764",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4044,11 +4452,13 @@
                     },
                     {
                       "__guid": "a4806bb5-d65b-4652-acff-0f43e1b3555c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2361.605,92.50995,131.0379",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4062,11 +4472,13 @@
                     },
                     {
                       "__guid": "3f34986f-1d54-48d3-b47b-f616f2faf734",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2375.833,85.38,134.2065",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4080,11 +4492,13 @@
                     },
                     {
                       "__guid": "780ab694-edc8-4875-ba09-9fef88b63979",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2388.742,76.84234,137.2876",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4098,11 +4512,13 @@
                     },
                     {
                       "__guid": "0bf01216-eaf2-4be5-ab4c-3595f99b756c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2403.898,68.09203,140.778",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4116,11 +4532,13 @@
                     },
                     {
                       "__guid": "8f10ac43-39bc-40be-8f74-31383d756825",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2420.819,58.32291,144.6748",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4134,11 +4552,13 @@
                     },
                     {
                       "__guid": "5532bb6b-d4cc-4d0f-baf8-b49eca924653",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2236.256,164.88,102.1702",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4152,11 +4572,13 @@
                     },
                     {
                       "__guid": "6dc6a204-f84e-4522-9c10-9a882e1f8f0c",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2217.396,175.7693,97.82654",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4170,11 +4592,13 @@
                     },
                     {
                       "__guid": "717ee79a-dd25-4b9b-be99-f4841fb34df8",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.554,188.3795,92.79636",
                       "Rotation": "-0.09492457,0.02543498,0.9612502,0.2575663",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4188,11 +4612,13 @@
                     },
                     {
                       "__guid": "e5d29050-0204-4955-9c62-2db7e8dadab6",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2233.192,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4206,11 +4632,13 @@
                     },
                     {
                       "__guid": "18735c11-2dcc-478a-a613-ca9dc4756ec7",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,170.837,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4224,11 +4652,13 @@
                     },
                     {
                       "__guid": "d343c5df-7008-41ff-92e5-2976fc695508",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,148.2036,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4242,11 +4672,13 @@
                     },
                     {
                       "__guid": "e24e6cff-d946-4205-959a-3cfd5e772585",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,126.9445,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4260,11 +4692,13 @@
                     },
                     {
                       "__guid": "5db9ed5a-3b93-41f7-b522-3090d0d60ccf",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,107.1009,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4278,11 +4712,13 @@
                     },
                     {
                       "__guid": "923ac19c-de79-4997-a477-08126ab1ea2e",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,82.36852,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4296,11 +4732,13 @@
                     },
                     {
                       "__guid": "8bbd8ade-6a2b-4910-aff7-4c9426b9a0e9",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,58.41703,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4314,11 +4752,13 @@
                     },
                     {
                       "__guid": "dd35362d-7608-45ae-a949-c4b1ad8a2810",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,38.51086,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4332,11 +4772,13 @@
                     },
                     {
                       "__guid": "5cc5fc61-64fa-429e-b2dc-f10023b7a790",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,18.97767,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4350,11 +4792,13 @@
                     },
                     {
                       "__guid": "e6c1a292-2bdc-411f-a4be-68a9f405e531",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,186.6183,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4368,11 +4812,13 @@
                     },
                     {
                       "__guid": "08d7f2a2-9665-4dbf-8fab-485c91949cc8",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,207.2403,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4386,11 +4832,13 @@
                     },
                     {
                       "__guid": "8d7e8e24-c89f-4210-b469-c890bacf910f",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2206.507,227.7847,53.11986",
                       "Rotation": "0,0,0.7071068,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4404,11 +4852,13 @@
                     },
                     {
                       "__guid": "06020bae-6ae6-43bc-80d5-a9768815181b",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2212.537,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4422,11 +4872,13 @@
                     },
                     {
                       "__guid": "8dc3381b-e8f9-4edb-a438-72c9ae56e29a",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.878,150.0316,85.049",
                       "Rotation": "0,0,1,0.0000001192093",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4440,11 +4892,13 @@
                     },
                     {
                       "__guid": "5ecc82aa-f8bf-4d1c-8a88-665c27634bb2",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,139.6724,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4458,11 +4912,13 @@
                     },
                     {
                       "__guid": "fa47f21b-ffed-480f-bef5-c0fc6513ff00",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,121.6463,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4476,11 +4932,13 @@
                     },
                     {
                       "__guid": "6b803285-e372-45c3-a37d-3837bd855ea7",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,105.0377,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4494,11 +4952,13 @@
                     },
                     {
                       "__guid": "d89206c7-d438-4c42-8e58-d2fa0748597e",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,87.6785,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4512,11 +4972,13 @@
                     },
                     {
                       "__guid": "3e07ba18-6999-4913-b4e1-04495e6eae88",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,71.78499,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4530,11 +4992,13 @@
                     },
                     {
                       "__guid": "3fd3a42b-092a-4ce8-81be-b65d02ab52b4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,55.31791,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4548,11 +5012,13 @@
                     },
                     {
                       "__guid": "f9369a3d-c57b-47ec-a718-8565384cde55",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,37.40689,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4566,11 +5032,13 @@
                     },
                     {
                       "__guid": "7a491b92-eeac-45d5-ae59-b540182762f8",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2385.405,17.68564,53.40219",
                       "Rotation": "0,0,0.7071069,-0.7071067",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4584,11 +5052,13 @@
                     },
                     {
                       "__guid": "90c26575-8a4d-4d5b-bb1e-555f2c5e45ba",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2209.357,163.356,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4602,11 +5072,13 @@
                     },
                     {
                       "__guid": "5b16c8dd-e331-4bae-9156-4421697f6492",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2202.81,175.6751,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4620,11 +5092,13 @@
                     },
                     {
                       "__guid": "4ec2071f-df17-4c10-8838-736f23bcd912",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2195.012,189.7625,37.26858",
                       "Rotation": "0,0,0.8660253,0.5000001",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4638,11 +5112,13 @@
                     },
                     {
                       "__guid": "60fb434a-41ce-4acc-b79c-91e0cf1eecd4",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2265.125,63.99927,37.26858",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4656,11 +5132,13 @@
                     },
                     {
                       "__guid": "a0c7297b-82b0-4493-a2fc-24cea7ac7513",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2272.911,50.58575,37.58859",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4674,11 +5152,13 @@
                     },
                     {
                       "__guid": "b64a16c4-0939-447a-9aa9-432140430867",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2282.044,35.17963,37.5886",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4692,11 +5172,13 @@
                     },
                     {
                       "__guid": "32a5a591-9e35-4c62-aace-5408613f5127",
+                      "Flags": 0,
                       "Name": "Bird",
                       "Position": "2293.225,16.78186,37.58862",
                       "Rotation": "0,0,0.9659259,0.2588191",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -4714,18 +5196,22 @@
             },
             {
               "__guid": "54a08fe4-8324-4207-9e55-0bc52e4f4385",
+              "Flags": 0,
               "Name": "Smile",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "9e54ce8f-ce0e-4f26-b84a-140136692227",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2487.261,188.8612,31.96064",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4740,12 +5226,14 @@
                 },
                 {
                   "__guid": "575d6a55-2dc6-4fe7-944b-8bec701c9555",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2553.853,188.8615,84.79502",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4760,12 +5248,14 @@
                 },
                 {
                   "__guid": "260293f0-6cb0-4704-8880-814da9230afd",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2632.022,188.8616,31.64179",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4780,12 +5270,14 @@
                 },
                 {
                   "__guid": "74320d08-df4d-4ef9-b274-77ad671e2bb2",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2679.03,188.8618,99.36097",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4800,12 +5292,14 @@
                 },
                 {
                   "__guid": "0233f4b6-258e-43b1-a5b1-b3335cb9b3b3",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2613.499,188.862,107.8317",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4820,12 +5314,14 @@
                 },
                 {
                   "__guid": "414f925e-fde6-484b-ab16-550dd69379e2",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2486.865,188.8621,99.34879",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4840,12 +5336,14 @@
                 },
                 {
                   "__guid": "cadc120e-531c-470d-a81f-e2bd295805a5",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2486.866,115.1421,99.34917",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4860,12 +5358,14 @@
                 },
                 {
                   "__guid": "b20f4410-15cb-4c1c-97be-89cd861d1af7",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2551.435,115.1423,34.7608",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4880,12 +5380,14 @@
                 },
                 {
                   "__guid": "92072c8d-059d-4ed5-a646-25e1443792c6",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2602.981,115.1426,77.39957",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4900,12 +5402,14 @@
                 },
                 {
                   "__guid": "25432a61-bdb7-4eac-bdf0-382b75e0ebd4",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2664.531,115.1426,50.83322",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4920,12 +5424,14 @@
                 },
                 {
                   "__guid": "f4e21e71-ee33-4ca2-b33c-2096797a94ed",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2549.001,115.1427,120.8869",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4940,12 +5446,14 @@
                 },
                 {
                   "__guid": "b39a193f-20df-4dd7-b458-588f93c82df7",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2520.093,240.9957,93.10272",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4960,12 +5468,14 @@
                 },
                 {
                   "__guid": "d978569f-4c82-40ad-a09b-94735e0396f5",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2610.001,240.9959,39.69226",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -4980,12 +5490,14 @@
                 },
                 {
                   "__guid": "ed25370e-60df-446c-bc19-ae17feb305a7",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2571.787,240.9961,121.7629",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5000,12 +5512,14 @@
                 },
                 {
                   "__guid": "381497e9-fb03-4206-a592-c28a6c2d92d7",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2664.349,240.9963,118.1491",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5020,12 +5534,14 @@
                 },
                 {
                   "__guid": "63837f63-718f-4928-91e1-271e1fc2db38",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2484.538,240.9964,38.56429",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5040,12 +5556,14 @@
                 },
                 {
                   "__guid": "7ada2ca5-9b8a-4ad4-b9bf-42b0ab0c90d1",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2503.55,138.7534,57.94692",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5060,12 +5578,14 @@
                 },
                 {
                   "__guid": "24d4fb2f-f903-479c-84a8-620c5bc0c6eb",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2615.119,138.7536,116.1152",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5080,12 +5600,14 @@
                 },
                 {
                   "__guid": "87b3ce95-f6a2-41e8-98b6-13a383b15342",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2666.395,138.7538,81.27937",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5100,12 +5622,14 @@
                 },
                 {
                   "__guid": "df5ba8a4-73c4-4341-bfeb-820ace284694",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2602.375,138.7539,34.0964",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5120,11 +5644,13 @@
                 },
                 {
                   "__guid": "8bbc923f-a481-417b-9767-c8c0607da02f",
+                  "Flags": 0,
                   "Name": "Goal",
                   "Position": "2588.347,3.978702,58.21735",
                   "Rotation": "0.7071066,0,0,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5174,19 +5700,23 @@
             },
             {
               "__guid": "cba33092-2572-4229-ad06-ff573cf84cf1",
+              "Flags": 0,
               "Name": "Smile-Fake",
               "Position": "0,2047,0",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "137573c4-69fc-41ca-b74b-2df0b8d14e61",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2487.261,188.8612,31.96064",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5201,12 +5731,14 @@
                 },
                 {
                   "__guid": "9627904e-7a86-4309-8737-55910330a1ad",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2553.853,188.8615,84.79502",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5221,12 +5753,14 @@
                 },
                 {
                   "__guid": "a6ce91b6-fd44-4c39-a0d0-431bba46923c",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2632.022,188.8616,31.64179",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5241,12 +5775,14 @@
                 },
                 {
                   "__guid": "5379ace8-b2d2-4f4e-b666-7544b3b4edea",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2679.03,188.8618,99.36097",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5261,12 +5797,14 @@
                 },
                 {
                   "__guid": "fe37b66d-6217-4e50-a39b-3450404a998d",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2613.499,188.862,107.8317",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5281,12 +5819,14 @@
                 },
                 {
                   "__guid": "45382e78-5dee-4c83-a4b5-c96492dd5531",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2486.865,188.8621,99.34879",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5301,12 +5841,14 @@
                 },
                 {
                   "__guid": "645d4950-e66f-441f-8076-3f5c6dce5a35",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2486.866,115.1421,99.34917",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5321,12 +5863,14 @@
                 },
                 {
                   "__guid": "faf0d14c-6820-48e6-88d6-42aeead4fd58",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2551.435,115.1423,34.7608",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5341,12 +5885,14 @@
                 },
                 {
                   "__guid": "826268c8-346a-4f57-8a99-2f7425b44f03",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2602.981,115.1426,77.39957",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5361,12 +5907,14 @@
                 },
                 {
                   "__guid": "a525ff85-724b-4340-9f1f-9f7b617125f3",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2664.531,115.1426,50.83322",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5381,12 +5929,14 @@
                 },
                 {
                   "__guid": "367b2f7c-9dce-4648-af97-3325a3c54e5e",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2549.001,115.1427,120.8869",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5401,12 +5951,14 @@
                 },
                 {
                   "__guid": "9ff3f594-fd5e-4231-bf85-c2a10a6ef9aa",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2520.093,240.9957,93.10272",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5421,12 +5973,14 @@
                 },
                 {
                   "__guid": "30159058-2e26-4ec3-84fc-9fcc19b44839",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2610.001,240.9959,39.69226",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5441,12 +5995,14 @@
                 },
                 {
                   "__guid": "63ad8e76-5e96-4515-afb6-03acaf4bece4",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2571.787,240.9961,121.7629",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5461,12 +6017,14 @@
                 },
                 {
                   "__guid": "88ea4e05-d269-412b-ad84-572771b27888",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2664.349,240.9963,118.1491",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5481,12 +6039,14 @@
                 },
                 {
                   "__guid": "bbe23909-d7ef-4b1a-8c44-d35558efa005",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2484.538,240.9964,38.56429",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5501,12 +6061,14 @@
                 },
                 {
                   "__guid": "0ef6396c-8cbb-4f05-a6f1-74db3e2dc15f",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2503.55,138.7534,57.94692",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5521,12 +6083,14 @@
                 },
                 {
                   "__guid": "88ba221b-3ec7-4f2d-975e-af21fa2c8b93",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2615.119,138.7536,116.1152",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5541,12 +6105,14 @@
                 },
                 {
                   "__guid": "fa56ba17-2164-46e5-92b8-e2211b88b0cc",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2666.395,138.7538,81.27937",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5561,12 +6127,14 @@
                 },
                 {
                   "__guid": "f624da4f-3daa-4511-ad9b-48fd3c7d52fb",
+                  "Flags": 0,
                   "Name": "Plane",
                   "Position": "2602.375,138.7539,34.0964",
                   "Rotation": "0.4999999,0.4999999,-0.5,0.5000001",
                   "Scale": "0.5,0.5,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -5585,18 +6153,22 @@
         },
         {
           "__guid": "71116266-a1f5-43d7-87e8-c07239ffbea9",
+          "Flags": 0,
           "Name": "Portals",
           "Position": "296.4554,-15.66602,171.4444",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "b87ed68d-1bd3-4247-9cf1-7f6129ac976c",
+              "Flags": 0,
               "Name": "P1",
               "Position": "91,528,-97",
               "Rotation": "0,-0.7071067,0,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PlaneCollider",
@@ -5616,11 +6188,13 @@
             },
             {
               "__guid": "4548ddb0-b6b6-4de8-9fdd-c98d80221fde",
+              "Flags": 0,
               "Name": "P2",
               "Position": "911,528,-97",
               "Rotation": "0,-0.7071067,0,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PlaneCollider",
@@ -5640,12 +6214,14 @@
             },
             {
               "__guid": "a4a812f8-f3f5-48e5-a1c2-8b21e5a1eeab",
+              "Flags": 0,
               "Name": "P3",
               "Position": "2010.423,141.5203,-97.00064",
               "Rotation": "-0.5,0.4999999,-0.5000001,-0.4999998",
               "Scale": "1,2.892583,1",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PlaneCollider",
@@ -5665,11 +6241,13 @@
             },
             {
               "__guid": "6c95c968-fe97-46d8-9801-1c992cf2e01a",
+              "Flags": 0,
               "Name": "P4",
               "Position": "2280,305,-97",
               "Rotation": "0.4999999,-0.5,0.5,0.5000001",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PlaneCollider",
@@ -5691,18 +6269,22 @@
         },
         {
           "__guid": "a54b6914-2cfd-42b0-a90b-1ae026d97e25",
+          "Flags": 0,
           "Name": "Lights",
           "Position": "296.4554,-15.66602,171.4444",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "7119cf12-176f-42d2-b1d4-2794f7e58430",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "-169.7549,132.9189,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5718,11 +6300,13 @@
             },
             {
               "__guid": "e4f5be23-026e-4294-bf73-4a5ad3fb58a5",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "651.7001,92.72697,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5738,11 +6322,13 @@
             },
             {
               "__guid": "8db9f1c6-94cd-4619-8734-60453b51cd97",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "651.7001,229.5853,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5758,11 +6344,13 @@
             },
             {
               "__guid": "5097ece1-d4df-4579-bef4-22e1cc1ca722",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1471.7,229.5853,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5778,11 +6366,13 @@
             },
             {
               "__guid": "b036473e-c96f-4230-adc5-caa796ed53e7",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1477.231,132.9189,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5798,11 +6388,13 @@
             },
             {
               "__guid": "e939d9d5-31be-45bf-8207-ce51b84e8f35",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2303.625,64.8083,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5818,11 +6410,13 @@
             },
             {
               "__guid": "86bb2fd4-ae1a-432a-81bf-c9a60cc03b28",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2303.625,232.966,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5838,11 +6432,13 @@
             },
             {
               "__guid": "dd07e358-ee63-4f29-8b81-e6b669443626",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2295.751,2119.031,-89.51684",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5858,11 +6454,13 @@
             },
             {
               "__guid": "3ce05bcd-024b-42c1-8342-7bb655fc3106",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2295.751,2287.188,-89.51684",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5878,11 +6476,13 @@
             },
             {
               "__guid": "61d1db05-ed73-48df-96e7-8a5af4dae638",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2347.488,2467.353,-104.7475",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5898,11 +6498,13 @@
             },
             {
               "__guid": "f736a455-0c97-4ab9-9526-f56fda6d934e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2760.209,2181.393,-220.5038",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5918,11 +6520,13 @@
             },
             {
               "__guid": "2d6883fa-9b24-4b2e-b620-acbba601c777",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2584.735,2030.766,-268.0242",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5938,11 +6542,13 @@
             },
             {
               "__guid": "12eb1bff-a803-4182-81a2-3cef23f8fb6a",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2780.256,2439.479,-130.5443",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5958,11 +6564,13 @@
             },
             {
               "__guid": "9e7b4c77-4f4c-4240-9792-38165c0d4f0d",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2583.932,2604.752,-92.71547",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5978,11 +6586,13 @@
             },
             {
               "__guid": "6971f170-1c3c-46e4-b068-20932dd1d6e9",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "371.5506,132.9189,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -5998,11 +6608,13 @@
             },
             {
               "__guid": "b59ff08c-2339-4341-98d4-d7793696effc",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1193.562,92.72697,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6018,11 +6630,13 @@
             },
             {
               "__guid": "a27ae81b-b452-46c8-8451-f538527b2d89",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1193.562,229.5853,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6038,11 +6652,13 @@
             },
             {
               "__guid": "da7f711c-5efe-45fa-98d4-b38ab00a25b2",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2008.655,86.166,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6058,11 +6674,13 @@
             },
             {
               "__guid": "7f29aa47-ff05-4e33-9e22-87efca49b76e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2008.655,223.1128,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6078,11 +6696,13 @@
             },
             {
               "__guid": "e0699fc7-cae8-48e0-b48c-3d894e55967e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2825.498,86.166,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6098,11 +6718,13 @@
             },
             {
               "__guid": "b187810d-2fde-478f-b977-2ec33411d483",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2825.498,223.1128,-68.2244",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6118,11 +6740,13 @@
             },
             {
               "__guid": "cda34c6b-f698-4868-8d24-f5da8a1352cc",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "93.2117,547.8657,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6138,11 +6762,13 @@
             },
             {
               "__guid": "f0ef3db6-a61b-4478-9180-58d4456080e6",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "905.2903,547.8657,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6158,11 +6784,13 @@
             },
             {
               "__guid": "38bf81db-9d26-4eb4-860b-8a980bf7c0ef",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1721.405,547.8657,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6178,11 +6806,13 @@
             },
             {
               "__guid": "2d908341-14ad-4ed6-a8d1-5c63ae483e8b",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2569.444,547.8657,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6198,11 +6828,13 @@
             },
             {
               "__guid": "5c18d1a5-d013-4aea-a47e-3841f387278c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "333.7715,436.2813,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6218,11 +6850,13 @@
             },
             {
               "__guid": "8563e6c5-ac72-45ea-ad35-df787d367a51",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1145.85,436.2813,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6238,11 +6872,13 @@
             },
             {
               "__guid": "16bb7f58-777d-4005-9e19-0f21d510754e",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1961.965,436.2813,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6258,11 +6894,13 @@
             },
             {
               "__guid": "06beb74f-cb47-43f9-b396-d7d03d75f776",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2810.004,436.2813,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6278,11 +6916,13 @@
             },
             {
               "__guid": "805071eb-1808-4069-8ab2-2f59d046171c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "-100.6422,433.9075,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6298,11 +6938,13 @@
             },
             {
               "__guid": "2f43b0e1-004c-4b4c-85ef-46e533942bd8",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "711.4365,433.9075,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6318,11 +6960,13 @@
             },
             {
               "__guid": "8ba6c184-08a3-46d9-8942-d08f7d6604c5",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1527.551,433.9075,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6338,11 +6982,13 @@
             },
             {
               "__guid": "d9ede10d-9844-4bfd-ac55-5f9a4eaf3db6",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "2345.564,435.9455,-100.2501",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6358,11 +7004,13 @@
             },
             {
               "__guid": "c5983752-f05b-4256-8c59-7b65c89e5a6c",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1729.775,2047.145,-155.3529",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -6383,9 +7031,9 @@
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -6404,13 +7052,13 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-04-27T17:25:09.9025861-04:00",
+  "LastSaved": "2024-06-25T19:35:40.6414933-04:00",
   "ResourceVersion": 1,
-  "__version": 1,
   "__references": [
     "facepunch.tree_oak_big_a",
     "fpopium.couch_01",
     "frogpond.wallclock",
     "supercreator.chair"
-  ]
+  ],
+  "__version": 1
 }

@@ -3,12 +3,14 @@
   "GameObjects": [
     {
       "__guid": "f8d9e97c-24b7-4b07-a28e-2a95abc0c9cc",
+      "Flags": 0,
       "Name": "Player",
       "Position": "-131.0547,-60.38332,1.773426",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.SkinnedModelRenderer",
@@ -17,7 +19,8 @@
           "CreateBoneObjects": false,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         },
         {
           "__type": "Sandbox.CharacterController",
@@ -28,7 +31,8 @@
           "Height": 64,
           "IgnoreLayers": "",
           "Radius": 16,
-          "StepHeight": 18
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -65,12 +69,14 @@
       "Children": [
         {
           "__guid": "31c45c06-f8fd-4479-8090-799418264f4f",
+          "Flags": 0,
           "Name": "Camera",
           "Position": "3.525095,0.7382785,62.08046",
           "Rotation": "0.00000004301596,-0.00000000000001065814,0.0000002682209,-1",
           "Tags": "player_camera",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -121,9 +127,13 @@
             {
               "__type": "Sandbox.Tonemapping",
               "__guid": "981b0a52-ac91-442c-8547-b4183af2e239",
+              "__version": 1,
+              "ExposureBias": 2,
               "ExposureCompensation": 0,
+              "ExposureMethod": "RGB",
               "MaximumExposure": 2,
               "MinimumExposure": 1,
+              "Mode": "Legacy",
               "Rate": 1
             },
             {
@@ -177,10 +187,12 @@
         },
         {
           "__guid": "e0813127-6d4a-4dd0-aca3-b69e976ce668",
+          "Flags": 0,
           "Name": "Hud",
           "Position": "0.2744522,0.0001221194,0",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ScreenPanel",
@@ -198,10 +210,12 @@
         },
         {
           "__guid": "1f06ad16-e57c-45c8-82a4-50b1bc7b0b28",
+          "Flags": 0,
           "Name": "RT Disabler",
           "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "RenderTargetToggle",
@@ -231,10 +245,11 @@
     },
     {
       "__guid": "6897f533-ad00-4265-81a1-7f6d878c38c9",
+      "Flags": 0,
       "Name": "Hammer Map",
-      "Position": "16.63339,157.227,-53.35582",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.MapInstance",
@@ -247,29 +262,37 @@
     },
     {
       "__guid": "e99cae32-2d34-4754-877a-cfd381eff464",
+      "Flags": 0,
       "Name": "Map Extras",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "00523bb4-755f-4c0a-9023-f5a24003f3ca",
+          "Flags": 0,
           "Name": "Props",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "bfdbdc3a-9975-4e5c-8245-e0339166ef30",
+              "Flags": 0,
               "Name": "Bathroom",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "28947690-ad94-4720-b27c-4cedebb55104",
+                  "Flags": 0,
                   "Name": "Mirror",
                   "Position": "-253.4163,-640.2816,68.61787",
                   "Rotation": "0.00000002980232,0.7071067,-0.0000001192093,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -294,11 +317,13 @@
                   "Children": [
                     {
                       "__guid": "0f871c35-0c1a-481e-b52c-d3683351eb4a",
+                      "Flags": 0,
                       "Name": "Mirror_Cam",
                       "Position": "-0.000001161589,-0.000001368946,-6.496078",
                       "Rotation": "0.00000008940697,-0.7071067,0.0000001490116,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.CameraComponent",
@@ -323,11 +348,13 @@
                 },
                 {
                   "__guid": "23f54ab8-e5bc-4f34-884a-a807acc25927",
+                  "Flags": 0,
                   "Name": "Mirror",
                   "Position": "-0.3366013,-640.2816,68.61787",
                   "Rotation": "0.7071067,0.0000001078764,-0.7071068,0.00000001846948",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -352,11 +379,13 @@
                   "Children": [
                     {
                       "__guid": "4f24e6eb-bfa0-44fa-ac90-88636b8d17ec",
+                      "Flags": 0,
                       "Name": "Mirror_Cam",
                       "Position": "-0.000001161589,-0.000001368946,-6.496078",
                       "Rotation": "0.00000008940697,-0.7071067,0.0000001490116,0.7071068",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.CameraComponent",
@@ -383,16 +412,20 @@
             },
             {
               "__guid": "d4a8db8e-de51-4957-909a-fcf3de4f144c",
+              "Flags": 0,
               "Name": "Bedroom",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "269756eb-fa4f-4772-86c4-a5bb3ceb6683",
+                  "Flags": 0,
                   "Name": "Bed",
                   "Position": "-214.5805,-57.19759,0",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -414,11 +447,13 @@
                 },
                 {
                   "__guid": "87e4ea66-cf54-4edc-9939-9db9dbf35f89",
+                  "Flags": 0,
                   "Name": "Text Hide",
                   "Position": "-55.27455,-254.9626,53.91016",
                   "Rotation": "-0.7071067,0,0,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PlaneCollider",
@@ -451,16 +486,20 @@
             },
             {
               "__guid": "12befd35-4973-4da7-9dd5-731fe2d89611",
+              "Flags": 0,
               "Name": "Outside",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "984cd32c-c59d-4036-800b-2f2d838a91d7",
+                  "Flags": 0,
                   "Name": "Couch",
                   "Position": "-900,-386,8.432623",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -474,17 +513,21 @@
                 },
                 {
                   "__guid": "5dca481b-030c-480c-93dc-c9a8dde583ed",
+                  "Flags": 0,
                   "Name": "Trees",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Children": [
                     {
                       "__guid": "3be22416-d0af-4656-bf46-7eeaa97011cf",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-686.1365,181.9628,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -498,11 +541,13 @@
                     },
                     {
                       "__guid": "b8f5ae3b-d082-4fb6-83a0-8846f47c76bf",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1099.169,181.963,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -516,11 +561,13 @@
                     },
                     {
                       "__guid": "7ce59796-ddbd-4f95-88d7-27b9bbe6ee40",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1099.169,536.8212,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -534,11 +581,13 @@
                     },
                     {
                       "__guid": "5d224bb5-dc9d-4b7c-98d1-fc22797e8f77",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-627.3469,536.821,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -552,11 +601,13 @@
                     },
                     {
                       "__guid": "4a9d672b-8311-4623-bc64-de1bba378471",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1551.349,181.9631,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -570,11 +621,13 @@
                     },
                     {
                       "__guid": "66bcf51b-2a40-4452-98b4-7985a0d8f515",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1551.349,-204.1319,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -588,11 +641,13 @@
                     },
                     {
                       "__guid": "89646d09-7672-4f24-b7bf-d1fb0a6a75f0",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1995.339,99.23126,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -606,11 +661,13 @@
                     },
                     {
                       "__guid": "bea80100-c683-42a9-a07b-65a009164d3a",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1551.349,-534.5601,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -624,11 +681,13 @@
                     },
                     {
                       "__guid": "f026f5b1-5f2e-4cd1-804b-af449b19ff0c",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-2254.307,-298.4946,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -642,11 +701,13 @@
                     },
                     {
                       "__guid": "ddcf867f-f647-4327-92dd-587d8b555014",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1902.24,-780.2061,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -660,11 +721,13 @@
                     },
                     {
                       "__guid": "37831347-08d4-472e-a887-ccc7d5a59a77",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1551.35,-981.5557,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -678,11 +741,13 @@
                     },
                     {
                       "__guid": "001b90ba-2c6e-4266-a04f-81afb6f4d433",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1811.276,-1123.85,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -696,11 +761,13 @@
                     },
                     {
                       "__guid": "648f5e55-68aa-4f69-ab54-ac070e832cbc",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1551.35,-1334.654,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -714,11 +781,13 @@
                     },
                     {
                       "__guid": "bdd0f15d-ef8e-479c-8b47-a93fdf7358a2",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1381.975,-1858.998,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -732,11 +801,13 @@
                     },
                     {
                       "__guid": "03ea19be-9ac2-4ccf-9b43-9ddf1b81326b",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-1148.408,-1334.654,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -750,11 +821,13 @@
                     },
                     {
                       "__guid": "5fb538a7-fd97-4ee8-9721-16c7cfdecf12",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-863.1367,-1125.355,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -768,11 +841,13 @@
                     },
                     {
                       "__guid": "b9a612ee-6828-4de1-a909-cf89f5fe2765",
+                      "Flags": 0,
                       "Name": "Tree",
                       "Position": "-660.3717,-1334.654,-23.20264",
                       "Rotation": "0,0,1,0.0000001937151",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.ModelRenderer",
@@ -788,9 +863,11 @@
                 },
                 {
                   "__guid": "f1292d56-cea0-4e7b-a112-2549c500f872",
+                  "Flags": 0,
                   "Name": "Clone",
                   "Position": "-891,-368,9.5",
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SkinnedModelRenderer",
@@ -800,7 +877,8 @@
                       "CreateBoneObjects": false,
                       "Model": "models/citizen/citizen.vmdl",
                       "RenderType": "On",
-                      "Tint": "1,1,1,1"
+                      "Tint": "1,1,1,1",
+                      "UseAnimGraph": true
                     }
                   ]
                 }
@@ -808,17 +886,21 @@
             },
             {
               "__guid": "411dc827-bbf8-486c-a571-ead1b9bcd514",
+              "Flags": 0,
               "Name": "Attic",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "e2e7b6b0-f96b-4320-bd14-da957d1d098e",
+                  "Flags": 0,
                   "Name": "Couch",
                   "Position": "47.17176,-386,187.4303",
                   "Rotation": "0,0,-1,0.0000001947072",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -873,11 +955,13 @@
                 },
                 {
                   "__guid": "4d225b5d-968e-4e13-946f-b2e23f61225b",
+                  "Flags": 0,
                   "Name": "Table",
                   "Position": "1.41449,-387.8539,187.4303",
                   "Rotation": "0,0,-0.4999999,0.8660254",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -898,12 +982,14 @@
                 },
                 {
                   "__guid": "d13ef6e1-9f7a-42e5-8a01-3852674535e6",
+                  "Flags": 0,
                   "Name": "Mirror",
                   "Position": "44.14168,-26.40639,279.1939",
                   "Rotation": "0.4304593,0.4304593,-0.5609856,0.5609855",
                   "Scale": "1.847283,0.9788958,1",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -936,12 +1022,14 @@
                   "Children": [
                     {
                       "__guid": "f669cbd0-efa3-435c-b2ba-f81a116eee4b",
+                      "Flags": 0,
                       "Name": "Mirror_Cam",
                       "Position": "143.8083,-930.6451,147.855",
                       "Rotation": "0,-0.6087615,-0.00000001065875,0.7933534",
                       "Scale": "0.5413356,1.021559,1",
                       "Enabled": true,
                       "NetworkMode": 2,
+                      "NetworkInterpolation": true,
                       "Components": [
                         {
                           "__type": "Sandbox.CameraComponent",
@@ -966,9 +1054,11 @@
                 },
                 {
                   "__guid": "b9be646f-5cf0-4bfe-846c-574b451c655e",
+                  "Flags": 0,
                   "Name": "Couch Trigger",
                   "Position": "38.21315,-386.2328,209.4147",
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.BoxCollider",
@@ -998,11 +1088,13 @@
                 },
                 {
                   "__guid": "bf780622-75c4-461b-8504-984a7696a66d",
+                  "Flags": 0,
                   "Name": "Rig",
                   "Position": "7.277595,-373.2971,217.104",
                   "Rotation": "0,0,0.7071067,0.7071068",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.ModelRenderer",
@@ -1059,17 +1151,21 @@
         },
         {
           "__guid": "084ed382-3d2f-4006-83c0-3eefaf7250ee",
+          "Flags": 0,
           "Name": "Lighting",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "6f41a862-93ec-458b-bf9d-8c4aad3f0550",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "-133.84,-657.4263,90.97873",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1085,11 +1181,13 @@
             },
             {
               "__guid": "4529caba-3069-4a0b-aa9e-9aa895f25f05",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "-133.84,-131.8526,91.46677",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1105,11 +1203,13 @@
             },
             {
               "__guid": "5f47b2b5-6bd9-4200-80e1-a31def161112",
+              "Flags": 0,
               "Name": "Point Light",
               "Position": "1.819147,-408.0145,126.9043",
               "Tags": "light_point,light",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -1125,18 +1225,22 @@
             },
             {
               "__guid": "b13356ca-6f8e-4ed1-872c-3b46b44c59c8",
+              "Flags": 0,
               "Name": "Attic",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "ab027ace-5df2-4846-8a2f-1cbbb54f2c18",
+                  "Flags": 0,
                   "Name": "Spot Light",
                   "Position": "347.2647,-89.01769,318.378",
                   "Rotation": "0.2391176,0.09904575,-0.8923992,0.3696438",
                   "Tags": "light_spot,light",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SpotLight",
@@ -1154,12 +1258,14 @@
                 },
                 {
                   "__guid": "f2086586-2f25-466b-821e-0fe4ea08ec58",
+                  "Flags": 0,
                   "Name": "Spot Light",
                   "Position": "-159.264,-76.37062,318.378",
                   "Rotation": "0.1294095,0.2241438,-0.482963,0.8365163",
                   "Tags": "light_spot,light",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SpotLight",
@@ -1177,12 +1283,14 @@
                 },
                 {
                   "__guid": "d53b50a1-96fb-4241-9411-32114996bcc7",
+                  "Flags": 0,
                   "Name": "Spot Light",
                   "Position": "46.97204,-76.37062,385.8931",
                   "Rotation": "0.09229596,0.7010573,0.09229594,0.7010574",
                   "Tags": "light_spot,light",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SpotLight",
@@ -1200,12 +1308,14 @@
                 },
                 {
                   "__guid": "dabc3c7c-47d4-4aa6-9e4b-c3442694959b",
+                  "Flags": 0,
                   "Name": "Spot Light",
                   "Position": "-161.0371,-730.4421,318.3781",
                   "Rotation": "-0.0990457,0.2391176,0.3696437,0.8923992",
                   "Tags": "light_spot,light",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SpotLight",
@@ -1225,18 +1335,22 @@
             },
             {
               "__guid": "fb16cdb1-3312-4580-a65e-1ad0fe3a33fd",
+              "Flags": 0,
               "Name": "Outside",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Children": [
                 {
                   "__guid": "4f02f831-276b-427f-9648-39714fa092f6",
+                  "Flags": 0,
                   "Name": "Spot Light",
                   "Position": "-900,-386,268.3888",
                   "Rotation": "0,0.7071067,0,0.7071068",
                   "Tags": "light_spot,light",
                   "Enabled": true,
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.SpotLight",
@@ -1254,10 +1368,12 @@
                 },
                 {
                   "__guid": "2e9eeb47-d1d7-4a5c-bc15-87eebd68e10e",
+                  "Flags": 0,
                   "Name": "Clone Light",
                   "Position": "-877.6452,-323.4609,61.21437",
                   "Tags": "light_point,light",
                   "NetworkMode": 2,
+                  "NetworkInterpolation": true,
                   "Components": [
                     {
                       "__type": "Sandbox.PointLight",
@@ -1277,17 +1393,21 @@
         },
         {
           "__guid": "368e548a-fce7-4e0e-bffb-3fe782898d85",
+          "Flags": 0,
           "Name": "Text",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "242f6bc8-866e-480c-8560-ca91f0c93f1d",
+              "Flags": 0,
               "Name": "Bath_nohead",
               "Position": "-249.3641,-639.7626,136.4835",
               "Rotation": "0,0,1,0.0000001947072",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -1295,17 +1415,21 @@
                   "Color": "0.22114,0.00123,0.26512,1",
                   "FontFamily": "Poppins",
                   "FontSize": 64,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "You\u0027ve lost your head"
+                  "Text": "You\u0027ve lost your head",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "810a87f9-3f48-43fe-9951-f8d1ffaba757",
+              "Flags": 0,
               "Name": "Bed_1",
               "Position": "-17.93312,-51.50591,72.38264",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -1313,18 +1437,22 @@
                   "Color": "0.22184,0.03011,0.26977,1",
                   "FontFamily": "Poppins",
                   "FontSize": 60,
+                  "FontWeight": 800,
                   "Scale": 0.1,
-                  "Text": "You\u0027re awake\n"
+                  "Text": "You\u0027re awake\n",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "6ba56a54-3e06-45f8-88df-81b7747e378b",
+              "Flags": 0,
               "Name": "Bed_2",
               "Position": "-53.65599,-191.4618,41.21015",
               "Rotation": "0,0,-0.7071067,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -1332,8 +1460,10 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 60,
+                  "FontWeight": 800,
                   "Scale": 0.1,
-                  "Text": "But something\u0027s off...\nIsn\u0027t it?"
+                  "Text": "But something\u0027s off...\nIsn\u0027t it?",
+                  "TextAlignment": "Center"
                 }
               ]
             }
@@ -1341,21 +1471,26 @@
         },
         {
           "__guid": "58d59428-9700-41d6-a848-fb77c3ec3779",
+          "Flags": 0,
           "Name": "Hints",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "90deaad2-b8e2-4a8a-ad81-2ce336915bb5",
+              "Flags": 0,
               "Name": "Use Hint",
               "Position": "59.49742,-311.7561,232.4892",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.WorldPanel",
                   "__guid": "802a44a0-6adc-416a-b48c-1be4defd543a",
                   "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
                   "LookAtCamera": false,
                   "PanelSize": "512,512",
                   "RenderScale": 1,
@@ -1372,16 +1507,19 @@
             },
             {
               "__guid": "fd303be7-d801-4ee7-925a-c364fc712748",
+              "Flags": 0,
               "Name": "Lag Hint",
               "Position": "-54.2,-355.3591,47.17455",
               "Rotation": "0,0,0.7071067,0.7071068",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.WorldPanel",
                   "__guid": "af0a97d4-6d2c-474b-af5e-b47b57e62573",
                   "HorizontalAlign": "Center",
+                  "InteractionRange": 1000,
                   "LookAtCamera": false,
                   "PanelSize": "512,512",
                   "RenderScale": 1,
@@ -1403,9 +1541,9 @@
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -1424,13 +1562,13 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-04-27T17:18:20.5343843-04:00",
+  "LastSaved": "2024-06-25T19:34:59.5264315-04:00",
   "ResourceVersion": 1,
-  "__version": 1,
   "__references": [
     "evilinc.bed_motel",
     "facepunch.tree_oak_big_b",
     "fpopium.couch_01",
     "fpopium.table_01"
-  ]
+  ],
+  "__version": 1
 }

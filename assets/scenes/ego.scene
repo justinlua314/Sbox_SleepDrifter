@@ -3,12 +3,14 @@
   "GameObjects": [
     {
       "__guid": "9cffb867-f02f-485f-903d-c3cf7a48ba1f",
+      "Flags": 0,
       "Name": "Player",
       "Position": "255.5994,235.3826,1958.617",
       "Rotation": "0,0,0.7071067,0.7071068",
       "Tags": "player",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.SkinnedModelRenderer",
@@ -17,7 +19,8 @@
           "CreateBoneObjects": false,
           "Model": "models/citizen/citizen.vmdl",
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         },
         {
           "__type": "Sandbox.CharacterController",
@@ -28,7 +31,8 @@
           "Height": 64,
           "IgnoreLayers": "",
           "Radius": 16,
-          "StepHeight": 18
+          "StepHeight": 18,
+          "UseCollisionRules": false
         },
         {
           "__type": "Sandbox.Citizen.CitizenAnimationHelper",
@@ -65,12 +69,14 @@
       "Children": [
         {
           "__guid": "518b4d8b-ec9c-4b72-a71e-8af2c5398335",
+          "Flags": 0,
           "Name": "Camera",
           "Position": "3.525095,0.7382785,62.08046",
           "Rotation": "0.00000004301596,-0.00000000000001065814,0.0000002682209,-1",
           "Tags": "player_camera",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.CameraComponent",
@@ -197,11 +203,13 @@
         },
         {
           "__guid": "8d7689fe-316b-48ef-a756-bc12062e221b",
+          "Flags": 0,
           "Name": "Hud",
           "Position": "-209.1515,-566.9476,-2.11496",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ScreenPanel",
@@ -219,10 +227,13 @@
         },
         {
           "__guid": "5621c267-2e3d-46e1-9d99-4d538ad5cfee",
+          "Flags": 0,
           "Name": "RT Disabler",
+          "Position": "0,0,0",
           "Rotation": "0,0,-0.7071067,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "RenderTargetToggle",
@@ -244,10 +255,11 @@
     },
     {
       "__guid": "402c9638-e17f-4380-89d0-faa7335f168d",
-      "Name": "Map",
-      "Position": "15.5918,147.322,-51.72641",
+      "Flags": 0,
+      "Name": "Hammer Map",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.MapInstance",
@@ -260,18 +272,22 @@
     },
     {
       "__guid": "7571848e-e840-43a9-a44d-75965da3ca69",
+      "Flags": 0,
       "Name": "Mirrors",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "28edccca-cb78-40c2-a0fe-83a02b764bd2",
+          "Flags": 0,
           "Name": "Mirror",
           "Position": "49.4213,465.5193,2029.409",
           "Rotation": "0.2705981,0.6532815,-0.2705981,0.6532815",
           "Scale": "1.408084,1.318706,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -296,12 +312,14 @@
           "Children": [
             {
               "__guid": "07de325d-b703-43ce-a870-b87508a99ef9",
+              "Flags": 0,
               "Name": "Camera",
               "Position": "-0.00000007220379,0.00004691692,-2.412318",
               "Rotation": "0,-0.7071067,0.000000003604322,0.7071068",
               "Tags": "maincamera",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.CameraComponent",
@@ -326,12 +344,14 @@
         },
         {
           "__guid": "8c5aa1f0-0c94-4e91-b112-ecafe3757edd",
+          "Flags": 0,
           "Name": "Mirror",
           "Position": "461.8321,45.63223,2029.409",
           "Rotation": "0.6532815,-0.270598,-0.6532815,-0.270598",
           "Scale": "1.408084,1.318706,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -356,12 +376,14 @@
           "Children": [
             {
               "__guid": "759d96ce-934b-488d-8cd5-6a3cf749b535",
+              "Flags": 0,
               "Name": "Camera",
               "Position": "-0.00000007220379,0.00004691692,-2.412318",
               "Rotation": "0,-0.7071067,0.000000003604322,0.7071068",
               "Tags": "maincamera",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.CameraComponent",
@@ -386,12 +408,14 @@
         },
         {
           "__guid": "15e8f7e2-3637-41f1-8f1b-23d9d127a484",
+          "Flags": 0,
           "Name": "Mirror",
           "Position": "461.8321,461.5639,2029.409",
           "Rotation": "0.6532815,0.2705981,-0.6532815,0.2705981",
           "Scale": "1.408084,1.318706,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -416,12 +440,14 @@
           "Children": [
             {
               "__guid": "ae006e7d-1a10-4fa4-bf99-1f5679d1b2bf",
+              "Flags": 0,
               "Name": "Camera",
               "Position": "-0.00000007220379,0.00004691692,-2.412318",
               "Rotation": "0,-0.7071067,0.000000003604322,0.7071068",
               "Tags": "maincamera",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.CameraComponent",
@@ -446,12 +472,14 @@
         },
         {
           "__guid": "5feb0576-1cb2-41bb-a6a6-4faa0143108e",
+          "Flags": 0,
           "Name": "Mirror",
           "Position": "49.42134,49.58749,2029.409",
           "Rotation": "0.2705981,-0.6532815,-0.2705981,-0.6532815",
           "Scale": "1.408084,1.318706,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -476,12 +504,14 @@
           "Children": [
             {
               "__guid": "5adfab68-e88f-4628-ad60-99fe1498324b",
+              "Flags": 0,
               "Name": "Camera",
               "Position": "-0.00000007220379,0.00004691692,-2.412318",
               "Rotation": "0,-0.7071067,0.000000003604322,0.7071068",
               "Tags": "maincamera",
               "Enabled": true,
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.CameraComponent",
@@ -508,18 +538,22 @@
     },
     {
       "__guid": "01815f6c-f9bd-4d7f-95a8-f1d6ffeaae23",
+      "Flags": 0,
       "Name": "Text",
       "Position": "319.7861,332.357,2096.373",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "1ed0690c-bb1a-41b8-bd5b-0172befe7439",
+          "Flags": 0,
           "Name": "Text",
           "Position": "-63.91946,149.095,-45.60107",
           "Rotation": "0,0,0.7071067,0.7071068",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.TextRenderer",
@@ -527,24 +561,30 @@
               "Color": "0.20784,0.65882,0.76078,1",
               "FontFamily": "Poppins",
               "FontSize": 64,
+              "FontWeight": 800,
               "Scale": 0.3,
-              "Text": "You\u0027re beautiful\nJust as I intended"
+              "Text": "You\u0027re beautiful\nJust as I intended",
+              "TextAlignment": "Center"
             }
           ]
         },
         {
           "__guid": "006cb82e-48ec-47a2-8f41-4ec8a9d22858",
+          "Flags": 0,
           "Name": "Goodbye",
           "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Children": [
             {
               "__guid": "f3f8cb7d-52e5-4ba5-8566-fd8375cabeba",
+              "Flags": 0,
               "Name": "Leggo",
               "Position": "-238.3086,94.60495,-91.00098",
               "Rotation": "0,0,0.9238795,0.3826834",
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -552,17 +592,21 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 64,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "It\u0027s time to let go."
+                  "Text": "It\u0027s time to let go.",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "7fdd85f2-a2c5-43f8-a6a9-828bf716b9f7",
+              "Flags": 0,
               "Name": "Leggo",
               "Position": "111.8058,-268.007,-91.00098",
               "Rotation": "0,0,-0.3826833,0.9238796",
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -570,17 +614,21 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 64,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "It\u0027s time to let go."
+                  "Text": "It\u0027s time to let go.",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "30855231-f28a-4cb6-b361-6a94582f4d95",
+              "Flags": 0,
               "Name": "Leggo",
               "Position": "109.9884,96.87241,-91.00098",
               "Rotation": "0,0,0.3826835,0.9238794",
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -588,17 +636,21 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 64,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "It\u0027s time to let go."
+                  "Text": "It\u0027s time to let go.",
+                  "TextAlignment": "Center"
                 }
               ]
             },
             {
               "__guid": "4c40bbe5-f4b7-4e71-bd83-5ef20a4bf8cc",
+              "Flags": 0,
               "Name": "Leggo",
               "Position": "-236.3259,-263.1179,-91.00098",
               "Rotation": "0,0,-0.9238794,0.3826837",
               "NetworkMode": 2,
+              "NetworkInterpolation": true,
               "Components": [
                 {
                   "__type": "Sandbox.TextRenderer",
@@ -606,8 +658,10 @@
                   "Color": "0.20784,0.65882,0.76078,1",
                   "FontFamily": "Poppins",
                   "FontSize": 64,
+                  "FontWeight": 800,
                   "Scale": 0.3,
-                  "Text": "It\u0027s time to let go."
+                  "Text": "It\u0027s time to let go.",
+                  "TextAlignment": "Center"
                 }
               ]
             }
@@ -617,17 +671,21 @@
     },
     {
       "__guid": "86bd49e1-6e95-413e-9b44-2ecca84a678b",
+      "Flags": 0,
       "Name": "Lighting",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "23b0210c-91fd-46c6-a00f-63a77ef4fcb2",
+          "Flags": 0,
           "Name": "Point Light",
           "Position": "236.9,234.1508,247.2232",
           "Tags": "light_point,light",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PointLight",
@@ -643,11 +701,13 @@
         },
         {
           "__guid": "03464344-33e2-4ca8-85d8-5df3fb4b2df1",
+          "Flags": 0,
           "Name": "Room Light",
           "Position": "271.2018,239.8992,2078.347",
           "Tags": "light_point,light",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PointLight",
@@ -665,17 +725,21 @@
     },
     {
       "__guid": "0b4e3f64-40c4-435f-94d9-b29f50fde83d",
+      "Flags": 0,
       "Name": "Props",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Children": [
         {
           "__guid": "8deefba6-13f1-4538-9177-b25d6eeafd50",
+          "Flags": 0,
           "Name": "Platform",
           "Position": "256.1262,249.324,1953.183",
           "Scale": "11,11,0.1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.ModelRenderer",
@@ -721,11 +785,13 @@
         },
         {
           "__guid": "d009a2d6-f65a-436f-82ad-e60b79855b78",
+          "Flags": 0,
           "Name": "Trip Trigger",
           "Position": "253.2172,256.4895,1917.458",
           "Scale": "10.51998,10.3,1",
           "Enabled": true,
           "NetworkMode": 2,
+          "NetworkInterpolation": true,
           "Components": [
             {
               "__type": "Sandbox.PlaneCollider",
@@ -750,16 +816,19 @@
     },
     {
       "__guid": "96efb492-edf5-4f98-85b8-ced469ab9917",
+      "Flags": 0,
       "Name": "Lag Hint",
       "Position": "254.3194,451.1319,2002.976",
       "Rotation": "0,0,0.7071069,-0.7071066",
       "Enabled": true,
       "NetworkMode": 2,
+      "NetworkInterpolation": true,
       "Components": [
         {
           "__type": "Sandbox.WorldPanel",
           "__guid": "9dd65de9-105e-4932-b29c-1d7370fd6917",
           "HorizontalAlign": "Center",
+          "InteractionRange": 1000,
           "LookAtCamera": false,
           "PanelSize": "512,512",
           "RenderScale": 1,
@@ -777,9 +846,9 @@
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -798,8 +867,8 @@
   },
   "Title": "ego",
   "Description": "",
-  "LastSaved": "2024-04-27T17:22:09.3999297-04:00",
+  "LastSaved": "2024-06-25T19:35:52.8725402-04:00",
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }
